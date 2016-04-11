@@ -43,9 +43,9 @@
 // modules
 
 // platforms
-#include "hal.h"
-#include "user.h"
-#include "hal_obj.h"
+#include "sw\modules\hal\boards\boostxldrv8301_revB\f28x\f2806x\src/hal.h"
+#include "sw\solutions\instaspin_foc\boards\boostxldrv8301_revB\f28x\f2806xF\src\user.h"
+#include "sw\modules\hal\boards\boostxldrv8301_revB\f28x\f2806x\src\hal_obj.h"
 
 #ifdef FLASH
 #pragma CODE_SECTION(HAL_setupFlash,"ramfuncs");

@@ -54,8 +54,8 @@
 
 // platforms
 #include "sw/modules/ctrl/src/32b/ctrl.h"
-#include "hal.h"
-#include "user.h"
+#include "sw\modules\hal\boards\boostxldrv8301_revB\f28x\f2806x\src\hal.h"
+#include "sw\solutions\instaspin_foc\boards\boostxldrv8301_revB\f28x\f2806xF\src\user.h"
 
 
 #ifdef FLASH

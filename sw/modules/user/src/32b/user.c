@@ -39,7 +39,7 @@
 // the includes
 
 #include <math.h>
-#include "user.h"
+#include "sw\solutions\instaspin_foc\boards\boostxldrv8301_revB\f28x\f2806xF\src\user.h"
 #include "sw/modules/ctrl/src/32b/ctrl.h"
 
 

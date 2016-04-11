@@ -7,9 +7,9 @@ Description:	Enhanced sliding mode controller for Three Phase Permanent-Magnet
           		Synchronous Motor (PMSM)
 =================================================================================  */
 
-#include "esmopos.h"
-#include "angle_math.h"
-#include "pi.h"
+#include "sw\eSMO\v100\include\esmopos.h"
+#include "sw\eSMO\v100\include\angle_math.h"
+#include "sw\eSMO\v100\include\pi.h"
 
 #define PI 3.14159265358979
 
