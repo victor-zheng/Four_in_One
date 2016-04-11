@@ -1,0 +1,1531 @@
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 C/C++ Codegen                         PC v6.2.3 *
+       3              ;* Date/Time created: Thu Jun 25 17:41:28 2015                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --float_support=softlib --hll_source=on --mem_model:code=flat --mem_model:data=large -
+       6        0002  FP      .set    XAR2
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TMS320C2000 C/C++ Codegen PC v6.2.3 Copyright (c) 1996-2013 Texas I
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("D:\victor TI\Customer issue\Zero\4inOne\Code\sw\solutions\instaspin
+      13              ;       C:\ti\ccsv6\tools\compiler\ti-cgt-c2000_6.2.3\bin\opt2000.exe C:\\Users\\a0220341\\AppData\\Local\\Te
+      14              ;       C:\ti\ccsv6\tools\compiler\ti-cgt-c2000_6.2.3\bin\ac2000.exe -@C:\\Users\\a0220341\\AppData\\Local\\T
+      15 00000000               .sect   "ramfuncs"
+      16                      .global _FLASH_setStandbyWaitCount
+      17              
+      18              $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setStandbyWaitCount")
+      19                      .dwattr $C$DW$1, DW_AT_low_pc(_FLASH_setStandbyWaitCount)
+      20                      .dwattr $C$DW$1, DW_AT_high_pc(0x00)
+      21                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_FLASH_setStandbyWaitCount")
+      22                      .dwattr $C$DW$1, DW_AT_external
+      23                      .dwattr $C$DW$1, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/s
+      24                      .dwattr $C$DW$1, DW_AT_TI_begin_line(0x122)
+      25                      .dwattr $C$DW$1, DW_AT_TI_begin_column(0x06)
+      26                      .dwattr $C$DW$1, DW_AT_TI_max_frame_size(-2)
+      27                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+      28              
+      29                      .dwfde $C$DW$CIE, _FLASH_setStandbyWaitCount
+      30              $C$DW$2 .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+      31                      .dwattr $C$DW$2, DW_AT_TI_symbol_name("_flashHandle")
+      32                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$25)
+      33                      .dwattr $C$DW$2, DW_AT_location[DW_OP_reg12]
+      34              $C$DW$3 .dwtag  DW_TAG_formal_parameter, DW_AT_name("count")
+      35                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_count")
+      36                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$55)
+      37                      .dwattr $C$DW$3, DW_AT_location[DW_OP_reg0]
+      38              
+      39              ;***************************************************************
+      40              ;* FNAME: _FLASH_setStandbyWaitCount    FR SIZE:   0           *
+      41              ;*                                                             *
+      42              ;* FUNCTION ENVIRONMENT                                        *
+      43              ;*                                                             *
+      44              ;* FUNCTION PROPERTIES                                         *
+      45              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      46              ;***************************************************************
+      47              
+      48              _FLASH_setStandbyWaitCount:
+      49              ;* AR4   assigned to _flashHandle
+      50              $C$DW$4 .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+      51                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_flashHandle")
+      52                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$47)
+      53                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg12]
+      54              ;* AL    assigned to _count
+      55              $C$DW$5 .dwtag  DW_TAG_variable, DW_AT_name("count")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    2
+
+      56                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_count")
+      57                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$55)
+      58                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg0]
+      59                      .dwcfi  cfa_offset, -2
+      60                      .dwcfi  save_reg_to_mem, 26, 0
+      61                      .dwcfi  save_reg_to_reg, 78, 26
+      62 00000000 7622   EALLOW
+      63                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+      64 00000001 96E4          MOV       *+XAR4[4],AL          ; [CPU_] |297| 
+      65 00000002 761A   EDIS
+      66 00000003 FF69          SPM       #0                    ; [CPU_] 
+      67              $C$DW$6 .dwtag  DW_TAG_TI_branch
+      68                      .dwattr $C$DW$6, DW_AT_low_pc(0x00)
+      69                      .dwattr $C$DW$6, DW_AT_TI_return
+      70 00000004 0006          LRETR     ; [CPU_] 
+      71                      ; return occurs ; [] 
+      72                      .dwattr $C$DW$1, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src
+      73                      .dwattr $C$DW$1, DW_AT_TI_end_line(0x12e)
+      74                      .dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
+      75                      .dwendentry
+      76                      .dwendtag $C$DW$1
+      77              
+      78 00000005               .sect   "ramfuncs"
+      79                      .global _FLASH_setPowerMode
+      80              
+      81              $C$DW$7 .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setPowerMode")
+      82                      .dwattr $C$DW$7, DW_AT_low_pc(_FLASH_setPowerMode)
+      83                      .dwattr $C$DW$7, DW_AT_high_pc(0x00)
+      84                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_FLASH_setPowerMode")
+      85                      .dwattr $C$DW$7, DW_AT_external
+      86                      .dwattr $C$DW$7, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/s
+      87                      .dwattr $C$DW$7, DW_AT_TI_begin_line(0x10e)
+      88                      .dwattr $C$DW$7, DW_AT_TI_begin_column(0x06)
+      89                      .dwattr $C$DW$7, DW_AT_TI_max_frame_size(-2)
+      90                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+      91              
+      92                      .dwfde $C$DW$CIE, _FLASH_setPowerMode
+      93              $C$DW$8 .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+      94                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_flashHandle")
+      95                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$25)
+      96                      .dwattr $C$DW$8, DW_AT_location[DW_OP_reg12]
+      97              $C$DW$9 .dwtag  DW_TAG_formal_parameter, DW_AT_name("mode")
+      98                      .dwattr $C$DW$9, DW_AT_TI_symbol_name("_mode")
+      99                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$34)
+     100                      .dwattr $C$DW$9, DW_AT_location[DW_OP_reg0]
+     101              
+     102              ;***************************************************************
+     103              ;* FNAME: _FLASH_setPowerMode           FR SIZE:   0           *
+     104              ;*                                                             *
+     105              ;* FUNCTION ENVIRONMENT                                        *
+     106              ;*                                                             *
+     107              ;* FUNCTION PROPERTIES                                         *
+     108              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     109              ;***************************************************************
+     110              
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    3
+
+     111              _FLASH_setPowerMode:
+     112              ;* AR4   assigned to _flashHandle
+     113              $C$DW$10        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     114                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_flashHandle")
+     115                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$47)
+     116                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg12]
+     117              ;* AL    assigned to _mode
+     118              $C$DW$11        .dwtag  DW_TAG_variable, DW_AT_name("mode")
+     119                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_mode")
+     120                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$34)
+     121                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg0]
+     122                      .dwcfi  cfa_offset, -2
+     123                      .dwcfi  save_reg_to_mem, 26, 0
+     124                      .dwcfi  save_reg_to_reg, 78, 26
+     125 00000005 7622   EALLOW
+     126                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     127 00000006 18D4          AND       *+XAR4[2],#0xfffc     ; [CPU_] |278| 
+         00000007 FFFC 
+     128                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     129 00000008 98D4          OR        *+XAR4[2],AL          ; [CPU_] |281| 
+     130 00000009 761A   EDIS
+     131 0000000a FF69          SPM       #0                    ; [CPU_] 
+     132              $C$DW$12        .dwtag  DW_TAG_TI_branch
+     133                      .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     134                      .dwattr $C$DW$12, DW_AT_TI_return
+     135 0000000b 0006          LRETR     ; [CPU_] 
+     136                      ; return occurs ; [] 
+     137                      .dwattr $C$DW$7, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src
+     138                      .dwattr $C$DW$7, DW_AT_TI_end_line(0x11e)
+     139                      .dwattr $C$DW$7, DW_AT_TI_end_column(0x01)
+     140                      .dwendentry
+     141                      .dwendtag $C$DW$7
+     142              
+     143 0000000c               .sect   "ramfuncs"
+     144                      .global _FLASH_setOtpWaitStates
+     145              
+     146              $C$DW$13        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setOtpWaitStates")
+     147                      .dwattr $C$DW$13, DW_AT_low_pc(_FLASH_setOtpWaitStates)
+     148                      .dwattr $C$DW$13, DW_AT_high_pc(0x00)
+     149                      .dwattr $C$DW$13, DW_AT_TI_symbol_name("_FLASH_setOtpWaitStates")
+     150                      .dwattr $C$DW$13, DW_AT_external
+     151                      .dwattr $C$DW$13, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     152                      .dwattr $C$DW$13, DW_AT_TI_begin_line(0xfa)
+     153                      .dwattr $C$DW$13, DW_AT_TI_begin_column(0x06)
+     154                      .dwattr $C$DW$13, DW_AT_TI_max_frame_size(-2)
+     155                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     156              
+     157                      .dwfde $C$DW$CIE, _FLASH_setOtpWaitStates
+     158              $C$DW$14        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     159                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_flashHandle")
+     160                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$25)
+     161                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg12]
+     162              $C$DW$15        .dwtag  DW_TAG_formal_parameter, DW_AT_name("numStates")
+     163                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_numStates")
+     164                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$45)
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    4
+
+     165                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg0]
+     166              
+     167              ;***************************************************************
+     168              ;* FNAME: _FLASH_setOtpWaitStates       FR SIZE:   0           *
+     169              ;*                                                             *
+     170              ;* FUNCTION ENVIRONMENT                                        *
+     171              ;*                                                             *
+     172              ;* FUNCTION PROPERTIES                                         *
+     173              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     174              ;***************************************************************
+     175              
+     176              _FLASH_setOtpWaitStates:
+     177              ;* AR4   assigned to _flashHandle
+     178              $C$DW$16        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     179                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_flashHandle")
+     180                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$47)
+     181                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg12]
+     182              ;* AL    assigned to _numStates
+     183              $C$DW$17        .dwtag  DW_TAG_variable, DW_AT_name("numStates")
+     184                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_numStates")
+     185                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$45)
+     186                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg0]
+     187                      .dwcfi  cfa_offset, -2
+     188                      .dwcfi  save_reg_to_mem, 26, 0
+     189                      .dwcfi  save_reg_to_reg, 78, 26
+     190 0000000c 7622   EALLOW
+     191                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     192 0000000d 18FC          AND       *+XAR4[7],#0xffe0     ; [CPU_] |258| 
+         0000000e FFE0 
+     193                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     194 0000000f 98FC          OR        *+XAR4[7],AL          ; [CPU_] |261| 
+     195 00000010 761A   EDIS
+     196 00000011 FF69          SPM       #0                    ; [CPU_] 
+     197              $C$DW$18        .dwtag  DW_TAG_TI_branch
+     198                      .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     199                      .dwattr $C$DW$18, DW_AT_TI_return
+     200 00000012 0006          LRETR     ; [CPU_] 
+     201                      ; return occurs ; [] 
+     202                      .dwattr $C$DW$13, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     203                      .dwattr $C$DW$13, DW_AT_TI_end_line(0x10a)
+     204                      .dwattr $C$DW$13, DW_AT_TI_end_column(0x01)
+     205                      .dwendentry
+     206                      .dwendtag $C$DW$13
+     207              
+     208 00000013               .sect   "ramfuncs"
+     209                      .global _FLASH_setNumRandomReadWaitStates
+     210              
+     211              $C$DW$19        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setNumRandomReadWaitStates")
+     212                      .dwattr $C$DW$19, DW_AT_low_pc(_FLASH_setNumRandomReadWaitStates)
+     213                      .dwattr $C$DW$19, DW_AT_high_pc(0x00)
+     214                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_FLASH_setNumRandomReadWaitStates")
+     215                      .dwattr $C$DW$19, DW_AT_external
+     216                      .dwattr $C$DW$19, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     217                      .dwattr $C$DW$19, DW_AT_TI_begin_line(0xe6)
+     218                      .dwattr $C$DW$19, DW_AT_TI_begin_column(0x06)
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    5
+
+     219                      .dwattr $C$DW$19, DW_AT_TI_max_frame_size(-2)
+     220                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     221              
+     222                      .dwfde $C$DW$CIE, _FLASH_setNumRandomReadWaitStates
+     223              $C$DW$20        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     224                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_flashHandle")
+     225                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$25)
+     226                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg12]
+     227              $C$DW$21        .dwtag  DW_TAG_formal_parameter, DW_AT_name("numStates")
+     228                      .dwattr $C$DW$21, DW_AT_TI_symbol_name("_numStates")
+     229                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$42)
+     230                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg0]
+     231              
+     232              ;***************************************************************
+     233              ;* FNAME: _FLASH_setNumRandomReadWaitStates FR SIZE:   0           *
+     234              ;*                                                             *
+     235              ;* FUNCTION ENVIRONMENT                                        *
+     236              ;*                                                             *
+     237              ;* FUNCTION PROPERTIES                                         *
+     238              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     239              ;***************************************************************
+     240              
+     241              _FLASH_setNumRandomReadWaitStates:
+     242              ;* AR4   assigned to _flashHandle
+     243              $C$DW$22        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     244                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_flashHandle")
+     245                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$47)
+     246                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg12]
+     247              ;* AL    assigned to _numStates
+     248              $C$DW$23        .dwtag  DW_TAG_variable, DW_AT_name("numStates")
+     249                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_numStates")
+     250                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$42)
+     251                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg0]
+     252                      .dwcfi  cfa_offset, -2
+     253                      .dwcfi  save_reg_to_mem, 26, 0
+     254                      .dwcfi  save_reg_to_reg, 78, 26
+     255 00000013 7622   EALLOW
+     256                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     257 00000014 18F4          AND       *+XAR4[6],#0xfff0     ; [CPU_] |238| 
+         00000015 FFF0 
+     258                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     259 00000016 98F4          OR        *+XAR4[6],AL          ; [CPU_] |241| 
+     260 00000017 761A   EDIS
+     261 00000018 FF69          SPM       #0                    ; [CPU_] 
+     262              $C$DW$24        .dwtag  DW_TAG_TI_branch
+     263                      .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     264                      .dwattr $C$DW$24, DW_AT_TI_return
+     265 00000019 0006          LRETR     ; [CPU_] 
+     266                      ; return occurs ; [] 
+     267                      .dwattr $C$DW$19, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     268                      .dwattr $C$DW$19, DW_AT_TI_end_line(0xf6)
+     269                      .dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
+     270                      .dwendentry
+     271                      .dwendtag $C$DW$19
+     272              
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    6
+
+     273 0000001a               .sect   "ramfuncs"
+     274                      .global _FLASH_setNumPagedReadWaitStates
+     275              
+     276              $C$DW$25        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setNumPagedReadWaitStates")
+     277                      .dwattr $C$DW$25, DW_AT_low_pc(_FLASH_setNumPagedReadWaitStates)
+     278                      .dwattr $C$DW$25, DW_AT_high_pc(0x00)
+     279                      .dwattr $C$DW$25, DW_AT_TI_symbol_name("_FLASH_setNumPagedReadWaitStates")
+     280                      .dwattr $C$DW$25, DW_AT_external
+     281                      .dwattr $C$DW$25, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     282                      .dwattr $C$DW$25, DW_AT_TI_begin_line(0xd2)
+     283                      .dwattr $C$DW$25, DW_AT_TI_begin_column(0x06)
+     284                      .dwattr $C$DW$25, DW_AT_TI_max_frame_size(-2)
+     285                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     286              
+     287                      .dwfde $C$DW$CIE, _FLASH_setNumPagedReadWaitStates
+     288              $C$DW$26        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     289                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_flashHandle")
+     290                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$25)
+     291                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg12]
+     292              $C$DW$27        .dwtag  DW_TAG_formal_parameter, DW_AT_name("numStates")
+     293                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_numStates")
+     294                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$39)
+     295                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg0]
+     296              
+     297              ;***************************************************************
+     298              ;* FNAME: _FLASH_setNumPagedReadWaitStates FR SIZE:   0           *
+     299              ;*                                                             *
+     300              ;* FUNCTION ENVIRONMENT                                        *
+     301              ;*                                                             *
+     302              ;* FUNCTION PROPERTIES                                         *
+     303              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     304              ;***************************************************************
+     305              
+     306              _FLASH_setNumPagedReadWaitStates:
+     307              ;* AR4   assigned to _flashHandle
+     308              $C$DW$28        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     309                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_flashHandle")
+     310                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$47)
+     311                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg12]
+     312              ;* AL    assigned to _numStates
+     313              $C$DW$29        .dwtag  DW_TAG_variable, DW_AT_name("numStates")
+     314                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_numStates")
+     315                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$39)
+     316                      .dwattr $C$DW$29, DW_AT_location[DW_OP_reg0]
+     317                      .dwcfi  cfa_offset, -2
+     318                      .dwcfi  save_reg_to_mem, 26, 0
+     319                      .dwcfi  save_reg_to_reg, 78, 26
+     320 0000001a 7622   EALLOW
+     321                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     322 0000001b 18F4          AND       *+XAR4[6],#0xf0ff     ; [CPU_] |218| 
+         0000001c F0FF 
+     323                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     324 0000001d 98F4          OR        *+XAR4[6],AL          ; [CPU_] |221| 
+     325 0000001e 761A   EDIS
+     326 0000001f FF69          SPM       #0                    ; [CPU_] 
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    7
+
+     327              $C$DW$30        .dwtag  DW_TAG_TI_branch
+     328                      .dwattr $C$DW$30, DW_AT_low_pc(0x00)
+     329                      .dwattr $C$DW$30, DW_AT_TI_return
+     330 00000020 0006          LRETR     ; [CPU_] 
+     331                      ; return occurs ; [] 
+     332                      .dwattr $C$DW$25, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     333                      .dwattr $C$DW$25, DW_AT_TI_end_line(0xe2)
+     334                      .dwattr $C$DW$25, DW_AT_TI_end_column(0x01)
+     335                      .dwendentry
+     336                      .dwendtag $C$DW$25
+     337              
+     338 00000021               .sect   "ramfuncs"
+     339                      .global _FLASH_setActiveWaitCount
+     340              
+     341              $C$DW$31        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_setActiveWaitCount")
+     342                      .dwattr $C$DW$31, DW_AT_low_pc(_FLASH_setActiveWaitCount)
+     343                      .dwattr $C$DW$31, DW_AT_high_pc(0x00)
+     344                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_FLASH_setActiveWaitCount")
+     345                      .dwattr $C$DW$31, DW_AT_external
+     346                      .dwattr $C$DW$31, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     347                      .dwattr $C$DW$31, DW_AT_TI_begin_line(0xc2)
+     348                      .dwattr $C$DW$31, DW_AT_TI_begin_column(0x06)
+     349                      .dwattr $C$DW$31, DW_AT_TI_max_frame_size(-2)
+     350                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     351              
+     352                      .dwfde $C$DW$CIE, _FLASH_setActiveWaitCount
+     353              $C$DW$32        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     354                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_flashHandle")
+     355                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$25)
+     356                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg12]
+     357              $C$DW$33        .dwtag  DW_TAG_formal_parameter, DW_AT_name("count")
+     358                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_count")
+     359                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$55)
+     360                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg0]
+     361              
+     362              ;***************************************************************
+     363              ;* FNAME: _FLASH_setActiveWaitCount     FR SIZE:   0           *
+     364              ;*                                                             *
+     365              ;* FUNCTION ENVIRONMENT                                        *
+     366              ;*                                                             *
+     367              ;* FUNCTION PROPERTIES                                         *
+     368              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     369              ;***************************************************************
+     370              
+     371              _FLASH_setActiveWaitCount:
+     372              ;* AR4   assigned to _flashHandle
+     373              $C$DW$34        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     374                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_flashHandle")
+     375                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$47)
+     376                      .dwattr $C$DW$34, DW_AT_location[DW_OP_reg12]
+     377              ;* AL    assigned to _count
+     378              $C$DW$35        .dwtag  DW_TAG_variable, DW_AT_name("count")
+     379                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_count")
+     380                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$55)
+     381                      .dwattr $C$DW$35, DW_AT_location[DW_OP_reg0]
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    8
+
+     382                      .dwcfi  cfa_offset, -2
+     383                      .dwcfi  save_reg_to_mem, 26, 0
+     384                      .dwcfi  save_reg_to_reg, 78, 26
+     385 00000021 7622   EALLOW
+     386                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     387 00000022 96EC          MOV       *+XAR4[5],AL          ; [CPU_] |201| 
+     388 00000023 761A   EDIS
+     389 00000024 FF69          SPM       #0                    ; [CPU_] 
+     390              $C$DW$36        .dwtag  DW_TAG_TI_branch
+     391                      .dwattr $C$DW$36, DW_AT_low_pc(0x00)
+     392                      .dwattr $C$DW$36, DW_AT_TI_return
+     393 00000025 0006          LRETR     ; [CPU_] 
+     394                      ; return occurs ; [] 
+     395                      .dwattr $C$DW$31, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     396                      .dwattr $C$DW$31, DW_AT_TI_end_line(0xce)
+     397                      .dwattr $C$DW$31, DW_AT_TI_end_column(0x01)
+     398                      .dwendentry
+     399                      .dwendtag $C$DW$31
+     400              
+     401 00000000               .sect   ".text"
+     402                      .global _FLASH_init
+     403              
+     404              $C$DW$37        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_init")
+     405                      .dwattr $C$DW$37, DW_AT_low_pc(_FLASH_init)
+     406                      .dwattr $C$DW$37, DW_AT_high_pc(0x00)
+     407                      .dwattr $C$DW$37, DW_AT_TI_symbol_name("_FLASH_init")
+     408                      .dwattr $C$DW$37, DW_AT_external
+     409                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$25)
+     410                      .dwattr $C$DW$37, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     411                      .dwattr $C$DW$37, DW_AT_TI_begin_line(0xb2)
+     412                      .dwattr $C$DW$37, DW_AT_TI_begin_column(0x0e)
+     413                      .dwattr $C$DW$37, DW_AT_TI_max_frame_size(-2)
+     414                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     415              
+     416                      .dwfde $C$DW$CIE, _FLASH_init
+     417              $C$DW$38        .dwtag  DW_TAG_formal_parameter, DW_AT_name("pMemory")
+     418                      .dwattr $C$DW$38, DW_AT_TI_symbol_name("_pMemory")
+     419                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$3)
+     420                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg12]
+     421              $C$DW$39        .dwtag  DW_TAG_formal_parameter, DW_AT_name("numBytes")
+     422                      .dwattr $C$DW$39, DW_AT_TI_symbol_name("_numBytes")
+     423                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$49)
+     424                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg0]
+     425              
+     426              ;***************************************************************
+     427              ;* FNAME: _FLASH_init                   FR SIZE:   0           *
+     428              ;*                                                             *
+     429              ;* FUNCTION ENVIRONMENT                                        *
+     430              ;*                                                             *
+     431              ;* FUNCTION PROPERTIES                                         *
+     432              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     433              ;***************************************************************
+     434              
+     435              _FLASH_init:
+     436              ;* AR6   assigned to _numBytes
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE    9
+
+     437              $C$DW$40        .dwtag  DW_TAG_variable, DW_AT_name("numBytes")
+     438                      .dwattr $C$DW$40, DW_AT_TI_symbol_name("_numBytes")
+     439                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$49)
+     440                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg16]
+     441              ;* AR4   assigned to _pMemory
+     442              $C$DW$41        .dwtag  DW_TAG_variable, DW_AT_name("pMemory")
+     443                      .dwattr $C$DW$41, DW_AT_TI_symbol_name("_pMemory")
+     444                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$53)
+     445                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg12]
+     446                      .dwcfi  cfa_offset, -2
+     447                      .dwcfi  save_reg_to_mem, 26, 0
+     448                      .dwcfi  save_reg_to_reg, 78, 26
+     449 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_] |179| 
+     450                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     451 00000001 0208          MOVB      ACC,#8                ; [CPU_] |184| 
+     452 00000002 0FA6          CMPL      ACC,XAR6              ; [CPU_] |184| 
+     453 00000003 6902          B         $C$L1,LOS             ; [CPU_] |184| 
+     454                      ; branchcc occurs ; [] |184| 
+     455 00000004 D400          MOVB      XAR4,#0               ; [CPU_] |184| 
+     456              $C$L1:    
+     457              $C$DW$42        .dwtag  DW_TAG_TI_branch
+     458                      .dwattr $C$DW$42, DW_AT_low_pc(0x00)
+     459                      .dwattr $C$DW$42, DW_AT_TI_return
+     460 00000005 0006          LRETR     ; [CPU_] 
+     461                      ; return occurs ; [] 
+     462                      .dwattr $C$DW$37, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     463                      .dwattr $C$DW$37, DW_AT_TI_end_line(0xbe)
+     464                      .dwattr $C$DW$37, DW_AT_TI_end_column(0x01)
+     465                      .dwendentry
+     466                      .dwendtag $C$DW$37
+     467              
+     468 00000006               .sect   ".text"
+     469                      .global _FLASH_getStandbyWaitStatus
+     470              
+     471              $C$DW$43        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_getStandbyWaitStatus")
+     472                      .dwattr $C$DW$43, DW_AT_low_pc(_FLASH_getStandbyWaitStatus)
+     473                      .dwattr $C$DW$43, DW_AT_high_pc(0x00)
+     474                      .dwattr $C$DW$43, DW_AT_TI_symbol_name("_FLASH_getStandbyWaitStatus")
+     475                      .dwattr $C$DW$43, DW_AT_external
+     476                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$29)
+     477                      .dwattr $C$DW$43, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     478                      .dwattr $C$DW$43, DW_AT_TI_begin_line(0xa6)
+     479                      .dwattr $C$DW$43, DW_AT_TI_begin_column(0x17)
+     480                      .dwattr $C$DW$43, DW_AT_TI_max_frame_size(-2)
+     481                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     482              
+     483                      .dwfde $C$DW$CIE, _FLASH_getStandbyWaitStatus
+     484              $C$DW$44        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     485                      .dwattr $C$DW$44, DW_AT_TI_symbol_name("_flashHandle")
+     486                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$25)
+     487                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg12]
+     488              
+     489              ;***************************************************************
+     490              ;* FNAME: _FLASH_getStandbyWaitStatus   FR SIZE:   0           *
+     491              ;*                                                             *
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   10
+
+     492              ;* FUNCTION ENVIRONMENT                                        *
+     493              ;*                                                             *
+     494              ;* FUNCTION PROPERTIES                                         *
+     495              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     496              ;***************************************************************
+     497              
+     498              _FLASH_getStandbyWaitStatus:
+     499              ;* AR4   assigned to _flashHandle
+     500              $C$DW$45        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     501                      .dwattr $C$DW$45, DW_AT_TI_symbol_name("_flashHandle")
+     502                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$47)
+     503                      .dwattr $C$DW$45, DW_AT_location[DW_OP_reg12]
+     504              ;* AL    assigned to _status
+     505              $C$DW$46        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     506                      .dwattr $C$DW$46, DW_AT_TI_symbol_name("_status")
+     507                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$29)
+     508                      .dwattr $C$DW$46, DW_AT_location[DW_OP_reg0]
+     509                      .dwcfi  cfa_offset, -2
+     510                      .dwcfi  save_reg_to_mem, 26, 0
+     511                      .dwcfi  save_reg_to_reg, 78, 26
+     512                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     513 00000006 CCDC          AND       AL,*+XAR4[3],#0x0004  ; [CPU_] |172| 
+         00000007 0004 
+     514 00000008 FFC1          LSR       AL,2                  ; [CPU_] |172| 
+     515              $C$DW$47        .dwtag  DW_TAG_TI_branch
+     516                      .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+     517                      .dwattr $C$DW$47, DW_AT_TI_return
+     518 00000009 0006          LRETR     ; [CPU_] 
+     519                      ; return occurs ; [] 
+     520                      .dwattr $C$DW$43, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     521                      .dwattr $C$DW$43, DW_AT_TI_end_line(0xaf)
+     522                      .dwattr $C$DW$43, DW_AT_TI_end_column(0x01)
+     523                      .dwendentry
+     524                      .dwendtag $C$DW$43
+     525              
+     526 0000000a               .sect   ".text"
+     527                      .global _FLASH_getStandbyWaitCount
+     528              
+     529              $C$DW$48        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_getStandbyWaitCount")
+     530                      .dwattr $C$DW$48, DW_AT_low_pc(_FLASH_getStandbyWaitCount)
+     531                      .dwattr $C$DW$48, DW_AT_high_pc(0x00)
+     532                      .dwattr $C$DW$48, DW_AT_TI_symbol_name("_FLASH_getStandbyWaitCount")
+     533                      .dwattr $C$DW$48, DW_AT_external
+     534                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$19)
+     535                      .dwattr $C$DW$48, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     536                      .dwattr $C$DW$48, DW_AT_TI_begin_line(0x9a)
+     537                      .dwattr $C$DW$48, DW_AT_TI_begin_column(0x0a)
+     538                      .dwattr $C$DW$48, DW_AT_TI_max_frame_size(-2)
+     539                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     540              
+     541                      .dwfde $C$DW$CIE, _FLASH_getStandbyWaitCount
+     542              $C$DW$49        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     543                      .dwattr $C$DW$49, DW_AT_TI_symbol_name("_flashHandle")
+     544                      .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$25)
+     545                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg12]
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   11
+
+     546              
+     547              ;***************************************************************
+     548              ;* FNAME: _FLASH_getStandbyWaitCount    FR SIZE:   0           *
+     549              ;*                                                             *
+     550              ;* FUNCTION ENVIRONMENT                                        *
+     551              ;*                                                             *
+     552              ;* FUNCTION PROPERTIES                                         *
+     553              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     554              ;***************************************************************
+     555              
+     556              _FLASH_getStandbyWaitCount:
+     557              ;* AR4   assigned to _flashHandle
+     558              $C$DW$50        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     559                      .dwattr $C$DW$50, DW_AT_TI_symbol_name("_flashHandle")
+     560                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$47)
+     561                      .dwattr $C$DW$50, DW_AT_location[DW_OP_reg12]
+     562              ;* AL    assigned to _count
+     563              $C$DW$51        .dwtag  DW_TAG_variable, DW_AT_name("count")
+     564                      .dwattr $C$DW$51, DW_AT_TI_symbol_name("_count")
+     565                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$19)
+     566                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg0]
+     567                      .dwcfi  cfa_offset, -2
+     568                      .dwcfi  save_reg_to_mem, 26, 0
+     569                      .dwcfi  save_reg_to_reg, 78, 26
+     570                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     571 0000000a CCE4          AND       AL,*+XAR4[4],#0x00ff  ; [CPU_] |160| 
+         0000000b 00FF 
+     572              $C$DW$52        .dwtag  DW_TAG_TI_branch
+     573                      .dwattr $C$DW$52, DW_AT_low_pc(0x00)
+     574                      .dwattr $C$DW$52, DW_AT_TI_return
+     575 0000000c 0006          LRETR     ; [CPU_] 
+     576                      ; return occurs ; [] 
+     577                      .dwattr $C$DW$48, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     578                      .dwattr $C$DW$48, DW_AT_TI_end_line(0xa3)
+     579                      .dwattr $C$DW$48, DW_AT_TI_end_column(0x01)
+     580                      .dwendentry
+     581                      .dwendtag $C$DW$48
+     582              
+     583 0000000d               .sect   ".text"
+     584                      .global _FLASH_getPowerMode
+     585              
+     586              $C$DW$53        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_getPowerMode")
+     587                      .dwattr $C$DW$53, DW_AT_low_pc(_FLASH_getPowerMode)
+     588                      .dwattr $C$DW$53, DW_AT_high_pc(0x00)
+     589                      .dwattr $C$DW$53, DW_AT_TI_symbol_name("_FLASH_getPowerMode")
+     590                      .dwattr $C$DW$53, DW_AT_external
+     591                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$33)
+     592                      .dwattr $C$DW$53, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     593                      .dwattr $C$DW$53, DW_AT_TI_begin_line(0x8e)
+     594                      .dwattr $C$DW$53, DW_AT_TI_begin_column(0x13)
+     595                      .dwattr $C$DW$53, DW_AT_TI_max_frame_size(-2)
+     596                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     597              
+     598                      .dwfde $C$DW$CIE, _FLASH_getPowerMode
+     599              $C$DW$54        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   12
+
+     600                      .dwattr $C$DW$54, DW_AT_TI_symbol_name("_flashHandle")
+     601                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$25)
+     602                      .dwattr $C$DW$54, DW_AT_location[DW_OP_reg12]
+     603              
+     604              ;***************************************************************
+     605              ;* FNAME: _FLASH_getPowerMode           FR SIZE:   0           *
+     606              ;*                                                             *
+     607              ;* FUNCTION ENVIRONMENT                                        *
+     608              ;*                                                             *
+     609              ;* FUNCTION PROPERTIES                                         *
+     610              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     611              ;***************************************************************
+     612              
+     613              _FLASH_getPowerMode:
+     614              ;* AR4   assigned to _flashHandle
+     615              $C$DW$55        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     616                      .dwattr $C$DW$55, DW_AT_TI_symbol_name("_flashHandle")
+     617                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$47)
+     618                      .dwattr $C$DW$55, DW_AT_location[DW_OP_reg12]
+     619              ;* AL    assigned to _mode
+     620              $C$DW$56        .dwtag  DW_TAG_variable, DW_AT_name("mode")
+     621                      .dwattr $C$DW$56, DW_AT_TI_symbol_name("_mode")
+     622                      .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$33)
+     623                      .dwattr $C$DW$56, DW_AT_location[DW_OP_reg0]
+     624                      .dwcfi  cfa_offset, -2
+     625                      .dwcfi  save_reg_to_mem, 26, 0
+     626                      .dwcfi  save_reg_to_reg, 78, 26
+     627                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     628 0000000d CCDC          AND       AL,*+XAR4[3],#0x0003  ; [CPU_] |148| 
+         0000000e 0003 
+     629              $C$DW$57        .dwtag  DW_TAG_TI_branch
+     630                      .dwattr $C$DW$57, DW_AT_low_pc(0x00)
+     631                      .dwattr $C$DW$57, DW_AT_TI_return
+     632 0000000f 0006          LRETR     ; [CPU_] 
+     633                      ; return occurs ; [] 
+     634                      .dwattr $C$DW$53, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     635                      .dwattr $C$DW$53, DW_AT_TI_end_line(0x97)
+     636                      .dwattr $C$DW$53, DW_AT_TI_end_column(0x01)
+     637                      .dwendentry
+     638                      .dwendtag $C$DW$53
+     639              
+     640 00000010               .sect   ".text"
+     641                      .global _FLASH_getActiveWaitStatus
+     642              
+     643              $C$DW$58        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_getActiveWaitStatus")
+     644                      .dwattr $C$DW$58, DW_AT_low_pc(_FLASH_getActiveWaitStatus)
+     645                      .dwattr $C$DW$58, DW_AT_high_pc(0x00)
+     646                      .dwattr $C$DW$58, DW_AT_TI_symbol_name("_FLASH_getActiveWaitStatus")
+     647                      .dwattr $C$DW$58, DW_AT_external
+     648                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$29)
+     649                      .dwattr $C$DW$58, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     650                      .dwattr $C$DW$58, DW_AT_TI_begin_line(0x82)
+     651                      .dwattr $C$DW$58, DW_AT_TI_begin_column(0x17)
+     652                      .dwattr $C$DW$58, DW_AT_TI_max_frame_size(-2)
+     653                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   13
+
+     654              
+     655                      .dwfde $C$DW$CIE, _FLASH_getActiveWaitStatus
+     656              $C$DW$59        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     657                      .dwattr $C$DW$59, DW_AT_TI_symbol_name("_flashHandle")
+     658                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$25)
+     659                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg12]
+     660              
+     661              ;***************************************************************
+     662              ;* FNAME: _FLASH_getActiveWaitStatus    FR SIZE:   0           *
+     663              ;*                                                             *
+     664              ;* FUNCTION ENVIRONMENT                                        *
+     665              ;*                                                             *
+     666              ;* FUNCTION PROPERTIES                                         *
+     667              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     668              ;***************************************************************
+     669              
+     670              _FLASH_getActiveWaitStatus:
+     671              ;* AR4   assigned to _flashHandle
+     672              $C$DW$60        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     673                      .dwattr $C$DW$60, DW_AT_TI_symbol_name("_flashHandle")
+     674                      .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$47)
+     675                      .dwattr $C$DW$60, DW_AT_location[DW_OP_reg12]
+     676              ;* AL    assigned to _status
+     677              $C$DW$61        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     678                      .dwattr $C$DW$61, DW_AT_TI_symbol_name("_status")
+     679                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$29)
+     680                      .dwattr $C$DW$61, DW_AT_location[DW_OP_reg0]
+     681                      .dwcfi  cfa_offset, -2
+     682                      .dwcfi  save_reg_to_mem, 26, 0
+     683                      .dwcfi  save_reg_to_reg, 78, 26
+     684                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     685 00000010 CCDC          AND       AL,*+XAR4[3],#0x0008  ; [CPU_] |136| 
+         00000011 0008 
+     686 00000012 FFC2          LSR       AL,3                  ; [CPU_] |136| 
+     687              $C$DW$62        .dwtag  DW_TAG_TI_branch
+     688                      .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+     689                      .dwattr $C$DW$62, DW_AT_TI_return
+     690 00000013 0006          LRETR     ; [CPU_] 
+     691                      ; return occurs ; [] 
+     692                      .dwattr $C$DW$58, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     693                      .dwattr $C$DW$58, DW_AT_TI_end_line(0x8b)
+     694                      .dwattr $C$DW$58, DW_AT_TI_end_column(0x01)
+     695                      .dwendentry
+     696                      .dwendtag $C$DW$58
+     697              
+     698 00000014               .sect   ".text"
+     699                      .global _FLASH_getActiveWaitCount
+     700              
+     701              $C$DW$63        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_getActiveWaitCount")
+     702                      .dwattr $C$DW$63, DW_AT_low_pc(_FLASH_getActiveWaitCount)
+     703                      .dwattr $C$DW$63, DW_AT_high_pc(0x00)
+     704                      .dwattr $C$DW$63, DW_AT_TI_symbol_name("_FLASH_getActiveWaitCount")
+     705                      .dwattr $C$DW$63, DW_AT_external
+     706                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$19)
+     707                      .dwattr $C$DW$63, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   14
+
+     708                      .dwattr $C$DW$63, DW_AT_TI_begin_line(0x76)
+     709                      .dwattr $C$DW$63, DW_AT_TI_begin_column(0x0a)
+     710                      .dwattr $C$DW$63, DW_AT_TI_max_frame_size(-2)
+     711                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     712              
+     713                      .dwfde $C$DW$CIE, _FLASH_getActiveWaitCount
+     714              $C$DW$64        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     715                      .dwattr $C$DW$64, DW_AT_TI_symbol_name("_flashHandle")
+     716                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$25)
+     717                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg12]
+     718              
+     719              ;***************************************************************
+     720              ;* FNAME: _FLASH_getActiveWaitCount     FR SIZE:   0           *
+     721              ;*                                                             *
+     722              ;* FUNCTION ENVIRONMENT                                        *
+     723              ;*                                                             *
+     724              ;* FUNCTION PROPERTIES                                         *
+     725              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     726              ;***************************************************************
+     727              
+     728              _FLASH_getActiveWaitCount:
+     729              ;* AR4   assigned to _flashHandle
+     730              $C$DW$65        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     731                      .dwattr $C$DW$65, DW_AT_TI_symbol_name("_flashHandle")
+     732                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$47)
+     733                      .dwattr $C$DW$65, DW_AT_location[DW_OP_reg12]
+     734              ;* AL    assigned to _count
+     735              $C$DW$66        .dwtag  DW_TAG_variable, DW_AT_name("count")
+     736                      .dwattr $C$DW$66, DW_AT_TI_symbol_name("_count")
+     737                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$19)
+     738                      .dwattr $C$DW$66, DW_AT_location[DW_OP_reg0]
+     739                      .dwcfi  cfa_offset, -2
+     740                      .dwcfi  save_reg_to_mem, 26, 0
+     741                      .dwcfi  save_reg_to_reg, 78, 26
+     742                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     743 00000014 CCEC          AND       AL,*+XAR4[5],#0x00ff  ; [CPU_] |124| 
+         00000015 00FF 
+     744              $C$DW$67        .dwtag  DW_TAG_TI_branch
+     745                      .dwattr $C$DW$67, DW_AT_low_pc(0x00)
+     746                      .dwattr $C$DW$67, DW_AT_TI_return
+     747 00000016 0006          LRETR     ; [CPU_] 
+     748                      ; return occurs ; [] 
+     749                      .dwattr $C$DW$63, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     750                      .dwattr $C$DW$63, DW_AT_TI_end_line(0x7f)
+     751                      .dwattr $C$DW$63, DW_AT_TI_end_column(0x01)
+     752                      .dwendentry
+     753                      .dwendtag $C$DW$63
+     754              
+     755 00000017               .sect   ".text"
+     756                      .global _FLASH_get3VStatus
+     757              
+     758              $C$DW$68        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_get3VStatus")
+     759                      .dwattr $C$DW$68, DW_AT_low_pc(_FLASH_get3VStatus)
+     760                      .dwattr $C$DW$68, DW_AT_high_pc(0x00)
+     761                      .dwattr $C$DW$68, DW_AT_TI_symbol_name("_FLASH_get3VStatus")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   15
+
+     762                      .dwattr $C$DW$68, DW_AT_external
+     763                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$23)
+     764                      .dwattr $C$DW$68, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     765                      .dwattr $C$DW$68, DW_AT_TI_begin_line(0x6a)
+     766                      .dwattr $C$DW$68, DW_AT_TI_begin_column(0x12)
+     767                      .dwattr $C$DW$68, DW_AT_TI_max_frame_size(-2)
+     768                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     769              
+     770                      .dwfde $C$DW$CIE, _FLASH_get3VStatus
+     771              $C$DW$69        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     772                      .dwattr $C$DW$69, DW_AT_TI_symbol_name("_flashHandle")
+     773                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$25)
+     774                      .dwattr $C$DW$69, DW_AT_location[DW_OP_reg12]
+     775              
+     776              ;***************************************************************
+     777              ;* FNAME: _FLASH_get3VStatus            FR SIZE:   0           *
+     778              ;*                                                             *
+     779              ;* FUNCTION ENVIRONMENT                                        *
+     780              ;*                                                             *
+     781              ;* FUNCTION PROPERTIES                                         *
+     782              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     783              ;***************************************************************
+     784              
+     785              _FLASH_get3VStatus:
+     786              ;* AR4   assigned to _flashHandle
+     787              $C$DW$70        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     788                      .dwattr $C$DW$70, DW_AT_TI_symbol_name("_flashHandle")
+     789                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$47)
+     790                      .dwattr $C$DW$70, DW_AT_location[DW_OP_reg12]
+     791              ;* AL    assigned to _status
+     792              $C$DW$71        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     793                      .dwattr $C$DW$71, DW_AT_TI_symbol_name("_status")
+     794                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$23)
+     795                      .dwattr $C$DW$71, DW_AT_location[DW_OP_reg0]
+     796                      .dwcfi  cfa_offset, -2
+     797                      .dwcfi  save_reg_to_mem, 26, 0
+     798                      .dwcfi  save_reg_to_reg, 78, 26
+     799                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     800 00000017 CCDC          AND       AL,*+XAR4[3],#0x0100  ; [CPU_] |112| 
+         00000018 0100 
+     801              $C$DW$72        .dwtag  DW_TAG_TI_branch
+     802                      .dwattr $C$DW$72, DW_AT_low_pc(0x00)
+     803                      .dwattr $C$DW$72, DW_AT_TI_return
+     804 00000019 0006          LRETR     ; [CPU_] 
+     805                      ; return occurs ; [] 
+     806                      .dwattr $C$DW$68, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     807                      .dwattr $C$DW$68, DW_AT_TI_end_line(0x73)
+     808                      .dwattr $C$DW$68, DW_AT_TI_end_column(0x01)
+     809                      .dwendentry
+     810                      .dwendtag $C$DW$68
+     811              
+     812 00000026               .sect   "ramfuncs"
+     813                      .global _FLASH_enablePipelineMode
+     814              
+     815              $C$DW$73        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_enablePipelineMode")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   16
+
+     816                      .dwattr $C$DW$73, DW_AT_low_pc(_FLASH_enablePipelineMode)
+     817                      .dwattr $C$DW$73, DW_AT_high_pc(0x00)
+     818                      .dwattr $C$DW$73, DW_AT_TI_symbol_name("_FLASH_enablePipelineMode")
+     819                      .dwattr $C$DW$73, DW_AT_external
+     820                      .dwattr $C$DW$73, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     821                      .dwattr $C$DW$73, DW_AT_TI_begin_line(0x5a)
+     822                      .dwattr $C$DW$73, DW_AT_TI_begin_column(0x06)
+     823                      .dwattr $C$DW$73, DW_AT_TI_max_frame_size(-2)
+     824                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     825              
+     826                      .dwfde $C$DW$CIE, _FLASH_enablePipelineMode
+     827              $C$DW$74        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     828                      .dwattr $C$DW$74, DW_AT_TI_symbol_name("_flashHandle")
+     829                      .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$25)
+     830                      .dwattr $C$DW$74, DW_AT_location[DW_OP_reg12]
+     831              
+     832              ;***************************************************************
+     833              ;* FNAME: _FLASH_enablePipelineMode     FR SIZE:   0           *
+     834              ;*                                                             *
+     835              ;* FUNCTION ENVIRONMENT                                        *
+     836              ;*                                                             *
+     837              ;* FUNCTION PROPERTIES                                         *
+     838              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     839              ;***************************************************************
+     840              
+     841              _FLASH_enablePipelineMode:
+     842              ;* AR4   assigned to _flashHandle
+     843              $C$DW$75        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     844                      .dwattr $C$DW$75, DW_AT_TI_symbol_name("_flashHandle")
+     845                      .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$47)
+     846                      .dwattr $C$DW$75, DW_AT_location[DW_OP_reg12]
+     847                      .dwcfi  cfa_offset, -2
+     848                      .dwcfi  save_reg_to_mem, 26, 0
+     849                      .dwcfi  save_reg_to_reg, 78, 26
+     850 00000026 7622   EALLOW
+     851                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     852 00000027 1AC4          OR        *+XAR4[0],#0x0001     ; [CPU_] |98| 
+         00000028 0001 
+     853 00000029 761A   EDIS
+     854 0000002a FF69          SPM       #0                    ; [CPU_] 
+     855              $C$DW$76        .dwtag  DW_TAG_TI_branch
+     856                      .dwattr $C$DW$76, DW_AT_low_pc(0x00)
+     857                      .dwattr $C$DW$76, DW_AT_TI_return
+     858 0000002b 0006          LRETR     ; [CPU_] 
+     859                      ; return occurs ; [] 
+     860                      .dwattr $C$DW$73, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     861                      .dwattr $C$DW$73, DW_AT_TI_end_line(0x67)
+     862                      .dwattr $C$DW$73, DW_AT_TI_end_column(0x01)
+     863                      .dwendentry
+     864                      .dwendtag $C$DW$73
+     865              
+     866 0000002c               .sect   "ramfuncs"
+     867                      .global _FLASH_disablePipelineMode
+     868              
+     869              $C$DW$77        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_disablePipelineMode")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   17
+
+     870                      .dwattr $C$DW$77, DW_AT_low_pc(_FLASH_disablePipelineMode)
+     871                      .dwattr $C$DW$77, DW_AT_high_pc(0x00)
+     872                      .dwattr $C$DW$77, DW_AT_TI_symbol_name("_FLASH_disablePipelineMode")
+     873                      .dwattr $C$DW$77, DW_AT_external
+     874                      .dwattr $C$DW$77, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     875                      .dwattr $C$DW$77, DW_AT_TI_begin_line(0x49)
+     876                      .dwattr $C$DW$77, DW_AT_TI_begin_column(0x06)
+     877                      .dwattr $C$DW$77, DW_AT_TI_max_frame_size(-2)
+     878                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     879              
+     880                      .dwfde $C$DW$CIE, _FLASH_disablePipelineMode
+     881              $C$DW$78        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     882                      .dwattr $C$DW$78, DW_AT_TI_symbol_name("_flashHandle")
+     883                      .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$25)
+     884                      .dwattr $C$DW$78, DW_AT_location[DW_OP_reg12]
+     885              
+     886              ;***************************************************************
+     887              ;* FNAME: _FLASH_disablePipelineMode    FR SIZE:   0           *
+     888              ;*                                                             *
+     889              ;* FUNCTION ENVIRONMENT                                        *
+     890              ;*                                                             *
+     891              ;* FUNCTION PROPERTIES                                         *
+     892              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     893              ;***************************************************************
+     894              
+     895              _FLASH_disablePipelineMode:
+     896              ;* AR4   assigned to _flashHandle
+     897              $C$DW$79        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     898                      .dwattr $C$DW$79, DW_AT_TI_symbol_name("_flashHandle")
+     899                      .dwattr $C$DW$79, DW_AT_type(*$C$DW$T$47)
+     900                      .dwattr $C$DW$79, DW_AT_location[DW_OP_reg12]
+     901                      .dwcfi  cfa_offset, -2
+     902                      .dwcfi  save_reg_to_mem, 26, 0
+     903                      .dwcfi  save_reg_to_reg, 78, 26
+     904 0000002c 7622   EALLOW
+     905                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     906 0000002d 18C4          AND       *+XAR4[0],#0xfffe     ; [CPU_] |81| 
+         0000002e FFFE 
+     907 0000002f 761A   EDIS
+     908 00000030 FF69          SPM       #0                    ; [CPU_] 
+     909              $C$DW$80        .dwtag  DW_TAG_TI_branch
+     910                      .dwattr $C$DW$80, DW_AT_low_pc(0x00)
+     911                      .dwattr $C$DW$80, DW_AT_TI_return
+     912 00000031 0006          LRETR     ; [CPU_] 
+     913                      ; return occurs ; [] 
+     914                      .dwattr $C$DW$77, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     915                      .dwattr $C$DW$77, DW_AT_TI_end_line(0x56)
+     916                      .dwattr $C$DW$77, DW_AT_TI_end_column(0x01)
+     917                      .dwendentry
+     918                      .dwendtag $C$DW$77
+     919              
+     920 0000001a               .sect   ".text"
+     921                      .global _FLASH_clear3VStatus
+     922              
+     923              $C$DW$81        .dwtag  DW_TAG_subprogram, DW_AT_name("FLASH_clear3VStatus")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   18
+
+     924                      .dwattr $C$DW$81, DW_AT_low_pc(_FLASH_clear3VStatus)
+     925                      .dwattr $C$DW$81, DW_AT_high_pc(0x00)
+     926                      .dwattr $C$DW$81, DW_AT_TI_symbol_name("_FLASH_clear3VStatus")
+     927                      .dwattr $C$DW$81, DW_AT_external
+     928                      .dwattr $C$DW$81, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/
+     929                      .dwattr $C$DW$81, DW_AT_TI_begin_line(0x38)
+     930                      .dwattr $C$DW$81, DW_AT_TI_begin_column(0x06)
+     931                      .dwattr $C$DW$81, DW_AT_TI_max_frame_size(-2)
+     932                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     933              
+     934                      .dwfde $C$DW$CIE, _FLASH_clear3VStatus
+     935              $C$DW$82        .dwtag  DW_TAG_formal_parameter, DW_AT_name("flashHandle")
+     936                      .dwattr $C$DW$82, DW_AT_TI_symbol_name("_flashHandle")
+     937                      .dwattr $C$DW$82, DW_AT_type(*$C$DW$T$25)
+     938                      .dwattr $C$DW$82, DW_AT_location[DW_OP_reg12]
+     939              
+     940              ;***************************************************************
+     941              ;* FNAME: _FLASH_clear3VStatus          FR SIZE:   0           *
+     942              ;*                                                             *
+     943              ;* FUNCTION ENVIRONMENT                                        *
+     944              ;*                                                             *
+     945              ;* FUNCTION PROPERTIES                                         *
+     946              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     947              ;***************************************************************
+     948              
+     949              _FLASH_clear3VStatus:
+     950              ;* AR4   assigned to _flashHandle
+     951              $C$DW$83        .dwtag  DW_TAG_variable, DW_AT_name("flashHandle")
+     952                      .dwattr $C$DW$83, DW_AT_TI_symbol_name("_flashHandle")
+     953                      .dwattr $C$DW$83, DW_AT_type(*$C$DW$T$47)
+     954                      .dwattr $C$DW$83, DW_AT_location[DW_OP_reg12]
+     955                      .dwcfi  cfa_offset, -2
+     956                      .dwcfi  save_reg_to_mem, 26, 0
+     957                      .dwcfi  save_reg_to_reg, 78, 26
+     958 0000001a 7622   EALLOW
+     959                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/src/32b/f28x/f2802x/flash
+     960 0000001b 1ADC          OR        *+XAR4[3],#0x0100     ; [CPU_] |64| 
+         0000001c 0100 
+     961 0000001d 761A   EDIS
+     962 0000001e FF69          SPM       #0                    ; [CPU_] 
+     963              $C$DW$84        .dwtag  DW_TAG_TI_branch
+     964                      .dwattr $C$DW$84, DW_AT_low_pc(0x00)
+     965                      .dwattr $C$DW$84, DW_AT_TI_return
+     966 0000001f 0006          LRETR     ; [CPU_] 
+     967                      ; return occurs ; [] 
+     968                      .dwattr $C$DW$81, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/flash/sr
+     969                      .dwattr $C$DW$81, DW_AT_TI_end_line(0x45)
+     970                      .dwattr $C$DW$81, DW_AT_TI_end_column(0x01)
+     971                      .dwendentry
+     972                      .dwendtag $C$DW$81
+     973              
+     974              
+     975              ;***************************************************************
+     976              ;* TYPE INFORMATION                                            *
+     977              ;***************************************************************
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   19
+
+     978              
+     979              $C$DW$T$22      .dwtag  DW_TAG_enumeration_type
+     980                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x01)
+     981              $C$DW$85        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_3VStatus_InRange"), DW_AT_const_value(0x00)
+     982              $C$DW$86        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_3VStatus_OutOfRange"), DW_AT_const_value(0x100)
+     983                      .dwendtag $C$DW$T$22
+     984              
+     985              $C$DW$T$23      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_3VStatus_e")
+     986                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$22)
+     987                      .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+     988              
+     989              $C$DW$T$28      .dwtag  DW_TAG_enumeration_type
+     990                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x01)
+     991              $C$DW$87        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_CounterStatus_NotCounting"), DW_AT_const_value(0
+     992              $C$DW$88        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_CounterStatus_Counting"), DW_AT_const_value(0x01
+     993                      .dwendtag $C$DW$T$28
+     994              
+     995              $C$DW$T$29      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_CounterStatus_e")
+     996                      .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+     997                      .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+     998              
+     999              $C$DW$T$32      .dwtag  DW_TAG_enumeration_type
+    1000                      .dwattr $C$DW$T$32, DW_AT_byte_size(0x01)
+    1001              $C$DW$89        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_PowerMode_PumpAndBankSleep"), DW_AT_const_value(
+    1002              $C$DW$90        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_PowerMode_PumpAndBankStandby"), DW_AT_const_valu
+    1003              $C$DW$91        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_PowerMode_PumpAndBankActive"), DW_AT_const_value
+    1004                      .dwendtag $C$DW$T$32
+    1005              
+    1006              $C$DW$T$33      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_PowerMode_e")
+    1007                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$32)
+    1008                      .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+    1009              $C$DW$92        .dwtag  DW_TAG_TI_far_type
+    1010                      .dwattr $C$DW$92, DW_AT_type(*$C$DW$T$33)
+    1011              $C$DW$T$34      .dwtag  DW_TAG_const_type
+    1012                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$92)
+    1013              
+    1014              $C$DW$T$37      .dwtag  DW_TAG_enumeration_type
+    1015                      .dwattr $C$DW$T$37, DW_AT_byte_size(0x01)
+    1016              $C$DW$93        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_0"), DW_AT_const_value(0x00)
+    1017              $C$DW$94        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_1"), DW_AT_const_value(0x100)
+    1018              $C$DW$95        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_2"), DW_AT_const_value(0x200)
+    1019              $C$DW$96        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_3"), DW_AT_const_value(0x300)
+    1020              $C$DW$97        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_4"), DW_AT_const_value(0x400)
+    1021              $C$DW$98        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_5"), DW_AT_const_value(0x500)
+    1022              $C$DW$99        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_6"), DW_AT_const_value(0x600)
+    1023              $C$DW$100       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_7"), DW_AT_const_value(0x700)
+    1024              $C$DW$101       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_8"), DW_AT_const_value(0x800)
+    1025              $C$DW$102       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_9"), DW_AT_const_value(0x900)
+    1026              $C$DW$103       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_10"), DW_AT_const_value(0xa00
+    1027              $C$DW$104       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_11"), DW_AT_const_value(0xb00
+    1028              $C$DW$105       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_12"), DW_AT_const_value(0xc00
+    1029              $C$DW$106       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_13"), DW_AT_const_value(0xd00
+    1030              $C$DW$107       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_14"), DW_AT_const_value(0xe00
+    1031              $C$DW$108       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumPagedWaitStates_15"), DW_AT_const_value(0xf00
+    1032                      .dwendtag $C$DW$T$37
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   20
+
+    1033              
+    1034              $C$DW$T$38      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_NumPagedWaitStates_e")
+    1035                      .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$37)
+    1036                      .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+    1037              $C$DW$109       .dwtag  DW_TAG_TI_far_type
+    1038                      .dwattr $C$DW$109, DW_AT_type(*$C$DW$T$38)
+    1039              $C$DW$T$39      .dwtag  DW_TAG_const_type
+    1040                      .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$109)
+    1041              
+    1042              $C$DW$T$40      .dwtag  DW_TAG_enumeration_type
+    1043                      .dwattr $C$DW$T$40, DW_AT_byte_size(0x01)
+    1044              $C$DW$110       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_1"), DW_AT_const_value(0x01)
+    1045              $C$DW$111       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_2"), DW_AT_const_value(0x02)
+    1046              $C$DW$112       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_3"), DW_AT_const_value(0x03)
+    1047              $C$DW$113       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_4"), DW_AT_const_value(0x04)
+    1048              $C$DW$114       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_5"), DW_AT_const_value(0x05)
+    1049              $C$DW$115       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_6"), DW_AT_const_value(0x06)
+    1050              $C$DW$116       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_7"), DW_AT_const_value(0x07)
+    1051              $C$DW$117       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_8"), DW_AT_const_value(0x08)
+    1052              $C$DW$118       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_9"), DW_AT_const_value(0x09)
+    1053              $C$DW$119       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_10"), DW_AT_const_value(0x0a
+    1054              $C$DW$120       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_11"), DW_AT_const_value(0x0b
+    1055              $C$DW$121       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_12"), DW_AT_const_value(0x0c
+    1056              $C$DW$122       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_13"), DW_AT_const_value(0x0d
+    1057              $C$DW$123       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_14"), DW_AT_const_value(0x0e
+    1058              $C$DW$124       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumRandomWaitStates_15"), DW_AT_const_value(0x0f
+    1059                      .dwendtag $C$DW$T$40
+    1060              
+    1061              $C$DW$T$41      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_NumRandomWaitStates_e")
+    1062                      .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+    1063                      .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+    1064              $C$DW$125       .dwtag  DW_TAG_TI_far_type
+    1065                      .dwattr $C$DW$125, DW_AT_type(*$C$DW$T$41)
+    1066              $C$DW$T$42      .dwtag  DW_TAG_const_type
+    1067                      .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$125)
+    1068              
+    1069              $C$DW$T$43      .dwtag  DW_TAG_enumeration_type
+    1070                      .dwattr $C$DW$T$43, DW_AT_byte_size(0x01)
+    1071              $C$DW$126       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_1"), DW_AT_const_value(0x01)
+    1072              $C$DW$127       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_2"), DW_AT_const_value(0x02)
+    1073              $C$DW$128       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_3"), DW_AT_const_value(0x03)
+    1074              $C$DW$129       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_4"), DW_AT_const_value(0x04)
+    1075              $C$DW$130       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_5"), DW_AT_const_value(0x05)
+    1076              $C$DW$131       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_6"), DW_AT_const_value(0x06)
+    1077              $C$DW$132       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_7"), DW_AT_const_value(0x07)
+    1078              $C$DW$133       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_8"), DW_AT_const_value(0x08)
+    1079              $C$DW$134       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_9"), DW_AT_const_value(0x09)
+    1080              $C$DW$135       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_10"), DW_AT_const_value(0x0a)
+    1081              $C$DW$136       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_11"), DW_AT_const_value(0x0b)
+    1082              $C$DW$137       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_12"), DW_AT_const_value(0x0c)
+    1083              $C$DW$138       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_13"), DW_AT_const_value(0x0d)
+    1084              $C$DW$139       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_14"), DW_AT_const_value(0x0e)
+    1085              $C$DW$140       .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH_NumOtpWaitStates_15"), DW_AT_const_value(0x0f)
+    1086                      .dwendtag $C$DW$T$43
+    1087              
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   21
+
+    1088              $C$DW$T$44      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_NumOtpWaitStates_e")
+    1089                      .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+    1090                      .dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+    1091              $C$DW$141       .dwtag  DW_TAG_TI_far_type
+    1092                      .dwattr $C$DW$141, DW_AT_type(*$C$DW$T$44)
+    1093              $C$DW$T$45      .dwtag  DW_TAG_const_type
+    1094                      .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$141)
+    1095              
+    1096              $C$DW$T$21      .dwtag  DW_TAG_structure_type
+    1097                      .dwattr $C$DW$T$21, DW_AT_name("_FLASH_Obj_")
+    1098                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x08)
+    1099              $C$DW$142       .dwtag  DW_TAG_member
+    1100                      .dwattr $C$DW$142, DW_AT_type(*$C$DW$T$20)
+    1101                      .dwattr $C$DW$142, DW_AT_name("FOPT")
+    1102                      .dwattr $C$DW$142, DW_AT_TI_symbol_name("_FOPT")
+    1103                      .dwattr $C$DW$142, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1104                      .dwattr $C$DW$142, DW_AT_accessibility(DW_ACCESS_public)
+    1105              $C$DW$143       .dwtag  DW_TAG_member
+    1106                      .dwattr $C$DW$143, DW_AT_type(*$C$DW$T$20)
+    1107                      .dwattr $C$DW$143, DW_AT_name("rsvd_1")
+    1108                      .dwattr $C$DW$143, DW_AT_TI_symbol_name("_rsvd_1")
+    1109                      .dwattr $C$DW$143, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1110                      .dwattr $C$DW$143, DW_AT_accessibility(DW_ACCESS_public)
+    1111              $C$DW$144       .dwtag  DW_TAG_member
+    1112                      .dwattr $C$DW$144, DW_AT_type(*$C$DW$T$20)
+    1113                      .dwattr $C$DW$144, DW_AT_name("FPWR")
+    1114                      .dwattr $C$DW$144, DW_AT_TI_symbol_name("_FPWR")
+    1115                      .dwattr $C$DW$144, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1116                      .dwattr $C$DW$144, DW_AT_accessibility(DW_ACCESS_public)
+    1117              $C$DW$145       .dwtag  DW_TAG_member
+    1118                      .dwattr $C$DW$145, DW_AT_type(*$C$DW$T$20)
+    1119                      .dwattr $C$DW$145, DW_AT_name("FSTATUS")
+    1120                      .dwattr $C$DW$145, DW_AT_TI_symbol_name("_FSTATUS")
+    1121                      .dwattr $C$DW$145, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+    1122                      .dwattr $C$DW$145, DW_AT_accessibility(DW_ACCESS_public)
+    1123              $C$DW$146       .dwtag  DW_TAG_member
+    1124                      .dwattr $C$DW$146, DW_AT_type(*$C$DW$T$20)
+    1125                      .dwattr $C$DW$146, DW_AT_name("FSTDBYWAIT")
+    1126                      .dwattr $C$DW$146, DW_AT_TI_symbol_name("_FSTDBYWAIT")
+    1127                      .dwattr $C$DW$146, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1128                      .dwattr $C$DW$146, DW_AT_accessibility(DW_ACCESS_public)
+    1129              $C$DW$147       .dwtag  DW_TAG_member
+    1130                      .dwattr $C$DW$147, DW_AT_type(*$C$DW$T$20)
+    1131                      .dwattr $C$DW$147, DW_AT_name("FACTIVEWAIT")
+    1132                      .dwattr $C$DW$147, DW_AT_TI_symbol_name("_FACTIVEWAIT")
+    1133                      .dwattr $C$DW$147, DW_AT_data_member_location[DW_OP_plus_uconst 0x5]
+    1134                      .dwattr $C$DW$147, DW_AT_accessibility(DW_ACCESS_public)
+    1135              $C$DW$148       .dwtag  DW_TAG_member
+    1136                      .dwattr $C$DW$148, DW_AT_type(*$C$DW$T$20)
+    1137                      .dwattr $C$DW$148, DW_AT_name("FBANKWAIT")
+    1138                      .dwattr $C$DW$148, DW_AT_TI_symbol_name("_FBANKWAIT")
+    1139                      .dwattr $C$DW$148, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1140                      .dwattr $C$DW$148, DW_AT_accessibility(DW_ACCESS_public)
+    1141              $C$DW$149       .dwtag  DW_TAG_member
+    1142                      .dwattr $C$DW$149, DW_AT_type(*$C$DW$T$20)
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   22
+
+    1143                      .dwattr $C$DW$149, DW_AT_name("FOTPWAIT")
+    1144                      .dwattr $C$DW$149, DW_AT_TI_symbol_name("_FOTPWAIT")
+    1145                      .dwattr $C$DW$149, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
+    1146                      .dwattr $C$DW$149, DW_AT_accessibility(DW_ACCESS_public)
+    1147                      .dwendtag $C$DW$T$21
+    1148              
+    1149              $C$DW$T$46      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_Obj")
+    1150                      .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$21)
+    1151                      .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+    1152              $C$DW$T$24      .dwtag  DW_TAG_pointer_type
+    1153                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$21)
+    1154                      .dwattr $C$DW$T$24, DW_AT_address_class(0x16)
+    1155              $C$DW$T$25      .dwtag  DW_TAG_typedef, DW_AT_name("FLASH_Handle")
+    1156                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+    1157                      .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+    1158              $C$DW$150       .dwtag  DW_TAG_TI_far_type
+    1159                      .dwattr $C$DW$150, DW_AT_type(*$C$DW$T$25)
+    1160              $C$DW$T$47      .dwtag  DW_TAG_const_type
+    1161                      .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$150)
+    1162              $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+    1163                      .dwattr $C$DW$T$3, DW_AT_address_class(0x16)
+    1164              $C$DW$151       .dwtag  DW_TAG_TI_far_type
+    1165                      .dwattr $C$DW$151, DW_AT_type(*$C$DW$T$3)
+    1166              $C$DW$T$53      .dwtag  DW_TAG_const_type
+    1167                      .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$151)
+    1168              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1169                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1170                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1171                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1172              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1173                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1174                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1175                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1176              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1177                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1178                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1179                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1180              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1181                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1182                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1183                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    1184              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1185                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1186                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1187                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1188              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1189                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1190                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1191                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1192              $C$DW$T$19      .dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
+    1193                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$9)
+    1194                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    1195              $C$DW$152       .dwtag  DW_TAG_TI_far_type
+    1196                      .dwattr $C$DW$152, DW_AT_type(*$C$DW$T$19)
+    1197              $C$DW$T$20      .dwtag  DW_TAG_volatile_type
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   23
+
+    1198                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$152)
+    1199              $C$DW$153       .dwtag  DW_TAG_TI_far_type
+    1200                      .dwattr $C$DW$153, DW_AT_type(*$C$DW$T$19)
+    1201              $C$DW$T$55      .dwtag  DW_TAG_const_type
+    1202                      .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$153)
+    1203              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1204                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1205                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1206                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1207              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1208                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1209                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1210                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1211              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1212                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1213                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1214                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    1215              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1216                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1217                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1218                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1219              $C$DW$T$48      .dwtag  DW_TAG_typedef, DW_AT_name("size_t")
+    1220                      .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$13)
+    1221                      .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+    1222              $C$DW$154       .dwtag  DW_TAG_TI_far_type
+    1223                      .dwattr $C$DW$154, DW_AT_type(*$C$DW$T$48)
+    1224              $C$DW$T$49      .dwtag  DW_TAG_const_type
+    1225                      .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$154)
+    1226              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1227                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1228                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1229                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1230              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1231                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1232                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1233                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1234              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1235                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1236                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1237                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1238              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1239                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1240                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1241                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+    1242              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1243                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1244                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1245                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1246                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1247              
+    1248              ;***************************************************************
+    1249              ;* DWARF CIE ENTRIES                                           *
+    1250              ;***************************************************************
+    1251              
+    1252              $C$DW$CIE       .dwcie 78
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   24
+
+    1253                      .dwcfi  cfa_register, 20
+    1254                      .dwcfi  cfa_offset, 0
+    1255                      .dwcfi  undefined, 0
+    1256                      .dwcfi  undefined, 1
+    1257                      .dwcfi  undefined, 2
+    1258                      .dwcfi  undefined, 3
+    1259                      .dwcfi  undefined, 20
+    1260                      .dwcfi  undefined, 21
+    1261                      .dwcfi  undefined, 22
+    1262                      .dwcfi  undefined, 23
+    1263                      .dwcfi  undefined, 24
+    1264                      .dwcfi  undefined, 25
+    1265                      .dwcfi  undefined, 26
+    1266                      .dwcfi  same_value, 28
+    1267                      .dwcfi  undefined, 29
+    1268                      .dwcfi  undefined, 30
+    1269                      .dwcfi  undefined, 31
+    1270                      .dwcfi  undefined, 32
+    1271                      .dwcfi  undefined, 33
+    1272                      .dwcfi  undefined, 34
+    1273                      .dwcfi  undefined, 35
+    1274                      .dwcfi  undefined, 36
+    1275                      .dwcfi  undefined, 37
+    1276                      .dwcfi  undefined, 38
+    1277                      .dwcfi  undefined, 75
+    1278                      .dwcfi  undefined, 76
+    1279                      .dwcfi  undefined, 77
+    1280                      .dwcfi  undefined, 4
+    1281                      .dwcfi  same_value, 6
+    1282                      .dwcfi  same_value, 8
+    1283                      .dwcfi  same_value, 10
+    1284                      .dwcfi  undefined, 12
+    1285                      .dwcfi  undefined, 14
+    1286                      .dwcfi  undefined, 16
+    1287                      .dwcfi  undefined, 17
+    1288                      .dwcfi  undefined, 18
+    1289                      .dwcfi  undefined, 19
+    1290                      .dwcfi  undefined, 5
+    1291                      .dwcfi  same_value, 7
+    1292                      .dwcfi  same_value, 9
+    1293                      .dwcfi  same_value, 11
+    1294                      .dwcfi  undefined, 13
+    1295                      .dwcfi  undefined, 15
+    1296                      .dwcfi  undefined, 78
+    1297                      .dwendentry
+    1298              
+    1299              ;***************************************************************
+    1300              ;* DWARF REGISTER MAP                                          *
+    1301              ;***************************************************************
+    1302              
+    1303              $C$DW$155       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AL")
+    1304                      .dwattr $C$DW$155, DW_AT_location[DW_OP_reg0]
+    1305              $C$DW$156       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AH")
+    1306                      .dwattr $C$DW$156, DW_AT_location[DW_OP_reg1]
+    1307              $C$DW$157       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PL")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   25
+
+    1308                      .dwattr $C$DW$157, DW_AT_location[DW_OP_reg2]
+    1309              $C$DW$158       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PH")
+    1310                      .dwattr $C$DW$158, DW_AT_location[DW_OP_reg3]
+    1311              $C$DW$159       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SP")
+    1312                      .dwattr $C$DW$159, DW_AT_location[DW_OP_reg20]
+    1313              $C$DW$160       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XT")
+    1314                      .dwattr $C$DW$160, DW_AT_location[DW_OP_reg21]
+    1315              $C$DW$161       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("T")
+    1316                      .dwattr $C$DW$161, DW_AT_location[DW_OP_reg22]
+    1317              $C$DW$162       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("ST0")
+    1318                      .dwattr $C$DW$162, DW_AT_location[DW_OP_reg23]
+    1319              $C$DW$163       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("ST1")
+    1320                      .dwattr $C$DW$163, DW_AT_location[DW_OP_reg24]
+    1321              $C$DW$164       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PC")
+    1322                      .dwattr $C$DW$164, DW_AT_location[DW_OP_reg25]
+    1323              $C$DW$165       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("RPC")
+    1324                      .dwattr $C$DW$165, DW_AT_location[DW_OP_reg26]
+    1325              $C$DW$166       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("FP")
+    1326                      .dwattr $C$DW$166, DW_AT_location[DW_OP_reg28]
+    1327              $C$DW$167       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("DP")
+    1328                      .dwattr $C$DW$167, DW_AT_location[DW_OP_reg29]
+    1329              $C$DW$168       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SXM")
+    1330                      .dwattr $C$DW$168, DW_AT_location[DW_OP_reg30]
+    1331              $C$DW$169       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PM")
+    1332                      .dwattr $C$DW$169, DW_AT_location[DW_OP_reg31]
+    1333              $C$DW$170       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("OVM")
+    1334                      .dwattr $C$DW$170, DW_AT_location[DW_OP_regx 0x20]
+    1335              $C$DW$171       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PAGE0")
+    1336                      .dwattr $C$DW$171, DW_AT_location[DW_OP_regx 0x21]
+    1337              $C$DW$172       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AMODE")
+    1338                      .dwattr $C$DW$172, DW_AT_location[DW_OP_regx 0x22]
+    1339              $C$DW$173       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("INTM")
+    1340                      .dwattr $C$DW$173, DW_AT_location[DW_OP_regx 0x23]
+    1341              $C$DW$174       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("IFR")
+    1342                      .dwattr $C$DW$174, DW_AT_location[DW_OP_regx 0x24]
+    1343              $C$DW$175       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("IER")
+    1344                      .dwattr $C$DW$175, DW_AT_location[DW_OP_regx 0x25]
+    1345              $C$DW$176       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("V")
+    1346                      .dwattr $C$DW$176, DW_AT_location[DW_OP_regx 0x26]
+    1347              $C$DW$177       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PSEUDOH")
+    1348                      .dwattr $C$DW$177, DW_AT_location[DW_OP_regx 0x4c]
+    1349              $C$DW$178       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("VOL")
+    1350                      .dwattr $C$DW$178, DW_AT_location[DW_OP_regx 0x4d]
+    1351              $C$DW$179       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR0")
+    1352                      .dwattr $C$DW$179, DW_AT_location[DW_OP_reg4]
+    1353              $C$DW$180       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR1")
+    1354                      .dwattr $C$DW$180, DW_AT_location[DW_OP_reg6]
+    1355              $C$DW$181       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR2")
+    1356                      .dwattr $C$DW$181, DW_AT_location[DW_OP_reg8]
+    1357              $C$DW$182       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR3")
+    1358                      .dwattr $C$DW$182, DW_AT_location[DW_OP_reg10]
+    1359              $C$DW$183       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR4")
+    1360                      .dwattr $C$DW$183, DW_AT_location[DW_OP_reg12]
+    1361              $C$DW$184       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR5")
+    1362                      .dwattr $C$DW$184, DW_AT_location[DW_OP_reg14]
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:29 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0269210                         PAGE   26
+
+    1363              $C$DW$185       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR6")
+    1364                      .dwattr $C$DW$185, DW_AT_location[DW_OP_reg16]
+    1365              $C$DW$186       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR6")
+    1366                      .dwattr $C$DW$186, DW_AT_location[DW_OP_reg17]
+    1367              $C$DW$187       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR7")
+    1368                      .dwattr $C$DW$187, DW_AT_location[DW_OP_reg18]
+    1369              $C$DW$188       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR7")
+    1370                      .dwattr $C$DW$188, DW_AT_location[DW_OP_reg19]
+    1371              $C$DW$189       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR0")
+    1372                      .dwattr $C$DW$189, DW_AT_location[DW_OP_reg5]
+    1373              $C$DW$190       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR1")
+    1374                      .dwattr $C$DW$190, DW_AT_location[DW_OP_reg7]
+    1375              $C$DW$191       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR2")
+    1376                      .dwattr $C$DW$191, DW_AT_location[DW_OP_reg9]
+    1377              $C$DW$192       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR3")
+    1378                      .dwattr $C$DW$192, DW_AT_location[DW_OP_reg11]
+    1379              $C$DW$193       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR4")
+    1380                      .dwattr $C$DW$193, DW_AT_location[DW_OP_reg13]
+    1381              $C$DW$194       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR5")
+    1382                      .dwattr $C$DW$194, DW_AT_location[DW_OP_reg15]
+    1383              $C$DW$195       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CIE_RETA")
+    1384                      .dwattr $C$DW$195, DW_AT_location[DW_OP_regx 0x4e]
+    1385                      .dwendtag $C$DW$CU
+    1386              
+
+No Assembly Errors, No Assembly Warnings

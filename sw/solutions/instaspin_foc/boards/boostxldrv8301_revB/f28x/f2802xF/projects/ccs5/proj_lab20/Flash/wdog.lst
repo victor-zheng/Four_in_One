@@ -1,0 +1,1101 @@
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 C/C++ Codegen                         PC v6.2.3 *
+       3              ;* Date/Time created: Thu Jun 25 17:41:56 2015                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --float_support=softlib --hll_source=on --mem_model:code=flat --mem_model:data=large -
+       6        0002  FP      .set    XAR2
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f2
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TMS320C2000 C/C++ Codegen PC v6.2.3 Copyright (c) 1996-2013 Texas I
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("D:\victor TI\Customer issue\Zero\4inOne\Code\sw\solutions\instaspin
+      13              ;       C:\ti\ccsv6\tools\compiler\ti-cgt-c2000_6.2.3\bin\opt2000.exe C:\\Users\\a0220341\\AppData\\Local\\Te
+      14              ;       C:\ti\ccsv6\tools\compiler\ti-cgt-c2000_6.2.3\bin\ac2000.exe -@C:\\Users\\a0220341\\AppData\\Local\\T
+      15 00000000               .sect   ".text"
+      16                      .global _WDOG_setPreScaler
+      17              
+      18              $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_setPreScaler")
+      19                      .dwattr $C$DW$1, DW_AT_low_pc(_WDOG_setPreScaler)
+      20                      .dwattr $C$DW$1, DW_AT_high_pc(0x00)
+      21                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_WDOG_setPreScaler")
+      22                      .dwattr $C$DW$1, DW_AT_external
+      23                      .dwattr $C$DW$1, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/sr
+      24                      .dwattr $C$DW$1, DW_AT_TI_begin_line(0xdb)
+      25                      .dwattr $C$DW$1, DW_AT_TI_begin_column(0x06)
+      26                      .dwattr $C$DW$1, DW_AT_TI_max_frame_size(-2)
+      27                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+      28              
+      29                      .dwfde $C$DW$CIE, _WDOG_setPreScaler
+      30              $C$DW$2 .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+      31                      .dwattr $C$DW$2, DW_AT_TI_symbol_name("_wdogHandle")
+      32                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$26)
+      33                      .dwattr $C$DW$2, DW_AT_location[DW_OP_reg12]
+      34              $C$DW$3 .dwtag  DW_TAG_formal_parameter, DW_AT_name("preScaler")
+      35                      .dwattr $C$DW$3, DW_AT_TI_symbol_name("_preScaler")
+      36                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$31)
+      37                      .dwattr $C$DW$3, DW_AT_location[DW_OP_reg0]
+      38              
+      39              ;***************************************************************
+      40              ;* FNAME: _WDOG_setPreScaler            FR SIZE:   0           *
+      41              ;*                                                             *
+      42              ;* FUNCTION ENVIRONMENT                                        *
+      43              ;*                                                             *
+      44              ;* FUNCTION PROPERTIES                                         *
+      45              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      46              ;***************************************************************
+      47              
+      48              _WDOG_setPreScaler:
+      49              ;* AR4   assigned to _wdogHandle
+      50              $C$DW$4 .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+      51                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_wdogHandle")
+      52                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$33)
+      53                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg12]
+      54              ;* AL    assigned to _preScaler
+      55              $C$DW$5 .dwtag  DW_TAG_variable, DW_AT_name("preScaler")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    2
+
+      56                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_preScaler")
+      57                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$31)
+      58                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg0]
+      59              ;* AH    assigned to _regValue
+      60              $C$DW$6 .dwtag  DW_TAG_variable, DW_AT_name("regValue")
+      61                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_regValue")
+      62                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$19)
+      63                      .dwattr $C$DW$6, DW_AT_location[DW_OP_reg1]
+      64                      .dwcfi  cfa_offset, -2
+      65                      .dwcfi  save_reg_to_mem, 26, 0
+      66                      .dwcfi  save_reg_to_reg, 78, 26
+      67                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+      68 00000000 93FC          MOV       AH,*+XAR4[7]          ; [CPU_] |222| 
+      69                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+      70 00000001 18A8          AND       AH,#0xfff8            ; [CPU_] |226| 
+         00000002 FFF8 
+      71 00000003 CBA9          OR        AH,AL                 ; [CPU_] |226| 
+      72 00000004 7622   EALLOW
+      73                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+      74 00000005 5128          ORB       AH,#0x28              ; [CPU_] |234| 
+      75 00000006 97FC          MOV       *+XAR4[7],AH          ; [CPU_] |234| 
+      76 00000007 761A   EDIS
+      77 00000008 FF69          SPM       #0                    ; [CPU_] 
+      78              $C$DW$7 .dwtag  DW_TAG_TI_branch
+      79                      .dwattr $C$DW$7, DW_AT_low_pc(0x00)
+      80                      .dwattr $C$DW$7, DW_AT_TI_return
+      81 00000009 0006          LRETR     ; [CPU_] 
+      82                      ; return occurs ; [] 
+      83                      .dwattr $C$DW$1, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/
+      84                      .dwattr $C$DW$1, DW_AT_TI_end_line(0xef)
+      85                      .dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
+      86                      .dwendentry
+      87                      .dwendtag $C$DW$1
+      88              
+      89 0000000a               .sect   ".text"
+      90                      .global _WDOG_setCount
+      91              
+      92              $C$DW$8 .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_setCount")
+      93                      .dwattr $C$DW$8, DW_AT_low_pc(_WDOG_setCount)
+      94                      .dwattr $C$DW$8, DW_AT_high_pc(0x00)
+      95                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_WDOG_setCount")
+      96                      .dwattr $C$DW$8, DW_AT_external
+      97                      .dwattr $C$DW$8, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/sr
+      98                      .dwattr $C$DW$8, DW_AT_TI_begin_line(0xcf)
+      99                      .dwattr $C$DW$8, DW_AT_TI_begin_column(0x06)
+     100                      .dwattr $C$DW$8, DW_AT_TI_max_frame_size(-2)
+     101                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     102              
+     103                      .dwfde $C$DW$CIE, _WDOG_setCount
+     104              $C$DW$9 .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     105                      .dwattr $C$DW$9, DW_AT_TI_symbol_name("_wdogHandle")
+     106                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$26)
+     107                      .dwattr $C$DW$9, DW_AT_location[DW_OP_reg12]
+     108              $C$DW$10        .dwtag  DW_TAG_formal_parameter, DW_AT_name("count")
+     109                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_count")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    3
+
+     110                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$42)
+     111                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg0]
+     112              
+     113              ;***************************************************************
+     114              ;* FNAME: _WDOG_setCount                FR SIZE:   0           *
+     115              ;*                                                             *
+     116              ;* FUNCTION ENVIRONMENT                                        *
+     117              ;*                                                             *
+     118              ;* FUNCTION PROPERTIES                                         *
+     119              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     120              ;***************************************************************
+     121              
+     122              _WDOG_setCount:
+     123              ;* AR4   assigned to _wdogHandle
+     124              $C$DW$11        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     125                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_wdogHandle")
+     126                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$33)
+     127                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg12]
+     128              ;* AL    assigned to _count
+     129              $C$DW$12        .dwtag  DW_TAG_variable, DW_AT_name("count")
+     130                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_count")
+     131                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$42)
+     132                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+     133                      .dwcfi  cfa_offset, -2
+     134                      .dwcfi  save_reg_to_mem, 26, 0
+     135                      .dwcfi  save_reg_to_reg, 78, 26
+     136                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     137 0000000a 96CC          MOV       *+XAR4[1],AL          ; [CPU_] |213| 
+     138              $C$DW$13        .dwtag  DW_TAG_TI_branch
+     139                      .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     140                      .dwattr $C$DW$13, DW_AT_TI_return
+     141 0000000b 0006          LRETR     ; [CPU_] 
+     142                      ; return occurs ; [] 
+     143                      .dwattr $C$DW$8, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/
+     144                      .dwattr $C$DW$8, DW_AT_TI_end_line(0xd8)
+     145                      .dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
+     146                      .dwendentry
+     147                      .dwendtag $C$DW$8
+     148              
+     149 0000000c               .sect   ".text"
+     150                      .global _WDOG_init
+     151              
+     152              $C$DW$14        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_init")
+     153                      .dwattr $C$DW$14, DW_AT_low_pc(_WDOG_init)
+     154                      .dwattr $C$DW$14, DW_AT_high_pc(0x00)
+     155                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_WDOG_init")
+     156                      .dwattr $C$DW$14, DW_AT_external
+     157                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$26)
+     158                      .dwattr $C$DW$14, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     159                      .dwattr $C$DW$14, DW_AT_TI_begin_line(0xc0)
+     160                      .dwattr $C$DW$14, DW_AT_TI_begin_column(0x0d)
+     161                      .dwattr $C$DW$14, DW_AT_TI_max_frame_size(-2)
+     162                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     163              
+     164                      .dwfde $C$DW$CIE, _WDOG_init
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    4
+
+     165              $C$DW$15        .dwtag  DW_TAG_formal_parameter, DW_AT_name("pMemory")
+     166                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_pMemory")
+     167                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$3)
+     168                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg12]
+     169              $C$DW$16        .dwtag  DW_TAG_formal_parameter, DW_AT_name("numBytes")
+     170                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_numBytes")
+     171                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$35)
+     172                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg0]
+     173              
+     174              ;***************************************************************
+     175              ;* FNAME: _WDOG_init                    FR SIZE:   0           *
+     176              ;*                                                             *
+     177              ;* FUNCTION ENVIRONMENT                                        *
+     178              ;*                                                             *
+     179              ;* FUNCTION PROPERTIES                                         *
+     180              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     181              ;***************************************************************
+     182              
+     183              _WDOG_init:
+     184              ;* AR6   assigned to _numBytes
+     185              $C$DW$17        .dwtag  DW_TAG_variable, DW_AT_name("numBytes")
+     186                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_numBytes")
+     187                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$35)
+     188                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg16]
+     189              ;* AR4   assigned to _pMemory
+     190              $C$DW$18        .dwtag  DW_TAG_variable, DW_AT_name("pMemory")
+     191                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_pMemory")
+     192                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$39)
+     193                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg12]
+     194                      .dwcfi  cfa_offset, -2
+     195                      .dwcfi  save_reg_to_mem, 26, 0
+     196                      .dwcfi  save_reg_to_reg, 78, 26
+     197 0000000c 1EA6          MOVL      XAR6,ACC              ; [CPU_] |193| 
+     198                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     199 0000000d 0208          MOVB      ACC,#8                ; [CPU_] |198| 
+     200 0000000e 0FA6          CMPL      ACC,XAR6              ; [CPU_] |198| 
+     201 0000000f 6902          B         $C$L1,LOS             ; [CPU_] |198| 
+     202                      ; branchcc occurs ; [] |198| 
+     203 00000010 D400          MOVB      XAR4,#0               ; [CPU_] |198| 
+     204              $C$L1:    
+     205              $C$DW$19        .dwtag  DW_TAG_TI_branch
+     206                      .dwattr $C$DW$19, DW_AT_low_pc(0x00)
+     207                      .dwattr $C$DW$19, DW_AT_TI_return
+     208 00000011 0006          LRETR     ; [CPU_] 
+     209                      ; return occurs ; [] 
+     210                      .dwattr $C$DW$14, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     211                      .dwattr $C$DW$14, DW_AT_TI_end_line(0xcc)
+     212                      .dwattr $C$DW$14, DW_AT_TI_end_column(0x01)
+     213                      .dwendentry
+     214                      .dwendtag $C$DW$14
+     215              
+     216 00000012               .sect   ".text"
+     217                      .global _WDOG_getIntStatus
+     218              
+     219              $C$DW$20        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_getIntStatus")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    5
+
+     220                      .dwattr $C$DW$20, DW_AT_low_pc(_WDOG_getIntStatus)
+     221                      .dwattr $C$DW$20, DW_AT_high_pc(0x00)
+     222                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_WDOG_getIntStatus")
+     223                      .dwattr $C$DW$20, DW_AT_external
+     224                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$24)
+     225                      .dwattr $C$DW$20, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     226                      .dwattr $C$DW$20, DW_AT_TI_begin_line(0xb4)
+     227                      .dwattr $C$DW$20, DW_AT_TI_begin_column(0x12)
+     228                      .dwattr $C$DW$20, DW_AT_TI_max_frame_size(-2)
+     229                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     230              
+     231                      .dwfde $C$DW$CIE, _WDOG_getIntStatus
+     232              $C$DW$21        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     233                      .dwattr $C$DW$21, DW_AT_TI_symbol_name("_wdogHandle")
+     234                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$26)
+     235                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg12]
+     236              
+     237              ;***************************************************************
+     238              ;* FNAME: _WDOG_getIntStatus            FR SIZE:   0           *
+     239              ;*                                                             *
+     240              ;* FUNCTION ENVIRONMENT                                        *
+     241              ;*                                                             *
+     242              ;* FUNCTION PROPERTIES                                         *
+     243              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     244              ;***************************************************************
+     245              
+     246              _WDOG_getIntStatus:
+     247              ;* AR4   assigned to _wdogHandle
+     248              $C$DW$22        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     249                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_wdogHandle")
+     250                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$33)
+     251                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg12]
+     252              ;* AL    assigned to _status
+     253              $C$DW$23        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     254                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_status")
+     255                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$24)
+     256                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg0]
+     257                      .dwcfi  cfa_offset, -2
+     258                      .dwcfi  save_reg_to_mem, 26, 0
+     259                      .dwcfi  save_reg_to_reg, 78, 26
+     260                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     261 00000012 CCC4          AND       AL,*+XAR4[0],#0x0004  ; [CPU_] |185| 
+         00000013 0004 
+     262              $C$DW$24        .dwtag  DW_TAG_TI_branch
+     263                      .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     264                      .dwattr $C$DW$24, DW_AT_TI_return
+     265 00000014 0006          LRETR     ; [CPU_] 
+     266                      ; return occurs ; [] 
+     267                      .dwattr $C$DW$20, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     268                      .dwattr $C$DW$20, DW_AT_TI_end_line(0xbd)
+     269                      .dwattr $C$DW$20, DW_AT_TI_end_column(0x01)
+     270                      .dwendentry
+     271                      .dwendtag $C$DW$20
+     272              
+     273 00000015               .sect   ".text"
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    6
+
+     274                      .global _WDOG_enableOverRide
+     275              
+     276              $C$DW$25        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_enableOverRide")
+     277                      .dwattr $C$DW$25, DW_AT_low_pc(_WDOG_enableOverRide)
+     278                      .dwattr $C$DW$25, DW_AT_high_pc(0x00)
+     279                      .dwattr $C$DW$25, DW_AT_TI_symbol_name("_WDOG_enableOverRide")
+     280                      .dwattr $C$DW$25, DW_AT_external
+     281                      .dwattr $C$DW$25, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     282                      .dwattr $C$DW$25, DW_AT_TI_begin_line(0xa4)
+     283                      .dwattr $C$DW$25, DW_AT_TI_begin_column(0x06)
+     284                      .dwattr $C$DW$25, DW_AT_TI_max_frame_size(-2)
+     285                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     286              
+     287                      .dwfde $C$DW$CIE, _WDOG_enableOverRide
+     288              $C$DW$26        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     289                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_wdogHandle")
+     290                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$26)
+     291                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg12]
+     292              
+     293              ;***************************************************************
+     294              ;* FNAME: _WDOG_enableOverRide          FR SIZE:   0           *
+     295              ;*                                                             *
+     296              ;* FUNCTION ENVIRONMENT                                        *
+     297              ;*                                                             *
+     298              ;* FUNCTION PROPERTIES                                         *
+     299              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     300              ;***************************************************************
+     301              
+     302              _WDOG_enableOverRide:
+     303              ;* AR4   assigned to _wdogHandle
+     304              $C$DW$27        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     305                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_wdogHandle")
+     306                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$33)
+     307                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg12]
+     308                      .dwcfi  cfa_offset, -2
+     309                      .dwcfi  save_reg_to_mem, 26, 0
+     310                      .dwcfi  save_reg_to_reg, 78, 26
+     311 00000015 7622   EALLOW
+     312                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     313 00000016 1AC4          OR        *+XAR4[0],#0x0001     ; [CPU_] |172| 
+         00000017 0001 
+     314 00000018 761A   EDIS
+     315 00000019 FF69          SPM       #0                    ; [CPU_] 
+     316              $C$DW$28        .dwtag  DW_TAG_TI_branch
+     317                      .dwattr $C$DW$28, DW_AT_low_pc(0x00)
+     318                      .dwattr $C$DW$28, DW_AT_TI_return
+     319 0000001a 0006          LRETR     ; [CPU_] 
+     320                      ; return occurs ; [] 
+     321                      .dwattr $C$DW$25, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     322                      .dwattr $C$DW$25, DW_AT_TI_end_line(0xb1)
+     323                      .dwattr $C$DW$25, DW_AT_TI_end_column(0x01)
+     324                      .dwendentry
+     325                      .dwendtag $C$DW$25
+     326              
+     327 0000001b               .sect   ".text"
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    7
+
+     328                      .global _WDOG_enableInt
+     329              
+     330              $C$DW$29        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_enableInt")
+     331                      .dwattr $C$DW$29, DW_AT_low_pc(_WDOG_enableInt)
+     332                      .dwattr $C$DW$29, DW_AT_high_pc(0x00)
+     333                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_WDOG_enableInt")
+     334                      .dwattr $C$DW$29, DW_AT_external
+     335                      .dwattr $C$DW$29, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     336                      .dwattr $C$DW$29, DW_AT_TI_begin_line(0x94)
+     337                      .dwattr $C$DW$29, DW_AT_TI_begin_column(0x06)
+     338                      .dwattr $C$DW$29, DW_AT_TI_max_frame_size(-2)
+     339                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     340              
+     341                      .dwfde $C$DW$CIE, _WDOG_enableInt
+     342              $C$DW$30        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     343                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_wdogHandle")
+     344                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$26)
+     345                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg12]
+     346              
+     347              ;***************************************************************
+     348              ;* FNAME: _WDOG_enableInt               FR SIZE:   0           *
+     349              ;*                                                             *
+     350              ;* FUNCTION ENVIRONMENT                                        *
+     351              ;*                                                             *
+     352              ;* FUNCTION PROPERTIES                                         *
+     353              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     354              ;***************************************************************
+     355              
+     356              _WDOG_enableInt:
+     357              ;* AR4   assigned to _wdogHandle
+     358              $C$DW$31        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     359                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_wdogHandle")
+     360                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$33)
+     361                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg12]
+     362                      .dwcfi  cfa_offset, -2
+     363                      .dwcfi  save_reg_to_mem, 26, 0
+     364                      .dwcfi  save_reg_to_reg, 78, 26
+     365 0000001b 7622   EALLOW
+     366                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     367 0000001c 1AC4          OR        *+XAR4[0],#0x0002     ; [CPU_] |156| 
+         0000001d 0002 
+     368 0000001e 761A   EDIS
+     369 0000001f FF69          SPM       #0                    ; [CPU_] 
+     370              $C$DW$32        .dwtag  DW_TAG_TI_branch
+     371                      .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+     372                      .dwattr $C$DW$32, DW_AT_TI_return
+     373 00000020 0006          LRETR     ; [CPU_] 
+     374                      ; return occurs ; [] 
+     375                      .dwattr $C$DW$29, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     376                      .dwattr $C$DW$29, DW_AT_TI_end_line(0xa1)
+     377                      .dwattr $C$DW$29, DW_AT_TI_end_column(0x01)
+     378                      .dwendentry
+     379                      .dwendtag $C$DW$29
+     380              
+     381 00000021               .sect   ".text"
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    8
+
+     382                      .global _WDOG_enable
+     383              
+     384              $C$DW$33        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_enable")
+     385                      .dwattr $C$DW$33, DW_AT_low_pc(_WDOG_enable)
+     386                      .dwattr $C$DW$33, DW_AT_high_pc(0x00)
+     387                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_WDOG_enable")
+     388                      .dwattr $C$DW$33, DW_AT_external
+     389                      .dwattr $C$DW$33, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     390                      .dwattr $C$DW$33, DW_AT_TI_begin_line(0x80)
+     391                      .dwattr $C$DW$33, DW_AT_TI_begin_column(0x06)
+     392                      .dwattr $C$DW$33, DW_AT_TI_max_frame_size(-2)
+     393                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     394              
+     395                      .dwfde $C$DW$CIE, _WDOG_enable
+     396              $C$DW$34        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     397                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_wdogHandle")
+     398                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$26)
+     399                      .dwattr $C$DW$34, DW_AT_location[DW_OP_reg12]
+     400              
+     401              ;***************************************************************
+     402              ;* FNAME: _WDOG_enable                  FR SIZE:   0           *
+     403              ;*                                                             *
+     404              ;* FUNCTION ENVIRONMENT                                        *
+     405              ;*                                                             *
+     406              ;* FUNCTION PROPERTIES                                         *
+     407              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     408              ;***************************************************************
+     409              
+     410              _WDOG_enable:
+     411              ;* AR4   assigned to _wdogHandle
+     412              $C$DW$35        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     413                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_wdogHandle")
+     414                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$33)
+     415                      .dwattr $C$DW$35, DW_AT_location[DW_OP_reg12]
+     416              ;* AL    assigned to _regValue
+     417              $C$DW$36        .dwtag  DW_TAG_variable, DW_AT_name("regValue")
+     418                      .dwattr $C$DW$36, DW_AT_TI_symbol_name("_regValue")
+     419                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$19)
+     420                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg0]
+     421                      .dwcfi  cfa_offset, -2
+     422                      .dwcfi  save_reg_to_mem, 26, 0
+     423                      .dwcfi  save_reg_to_reg, 78, 26
+     424                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     425 00000021 92FC          MOV       AL,*+XAR4[7]          ; [CPU_] |131| 
+     426 00000022 7622   EALLOW
+     427                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     428 00000023 18A9          AND       AL,#0xffbf            ; [CPU_] |140| 
+         00000024 FFBF 
+     429 00000025 5028          ORB       AL,#0x28              ; [CPU_] |140| 
+     430 00000026 96FC          MOV       *+XAR4[7],AL          ; [CPU_] |140| 
+     431 00000027 761A   EDIS
+     432 00000028 FF69          SPM       #0                    ; [CPU_] 
+     433              $C$DW$37        .dwtag  DW_TAG_TI_branch
+     434                      .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     435                      .dwattr $C$DW$37, DW_AT_TI_return
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE    9
+
+     436 00000029 0006          LRETR     ; [CPU_] 
+     437                      ; return occurs ; [] 
+     438                      .dwattr $C$DW$33, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     439                      .dwattr $C$DW$33, DW_AT_TI_end_line(0x91)
+     440                      .dwattr $C$DW$33, DW_AT_TI_end_column(0x01)
+     441                      .dwendentry
+     442                      .dwendtag $C$DW$33
+     443              
+     444 0000002a               .sect   ".text"
+     445                      .global _WDOG_disableOverRide
+     446              
+     447              $C$DW$38        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_disableOverRide")
+     448                      .dwattr $C$DW$38, DW_AT_low_pc(_WDOG_disableOverRide)
+     449                      .dwattr $C$DW$38, DW_AT_high_pc(0x00)
+     450                      .dwattr $C$DW$38, DW_AT_TI_symbol_name("_WDOG_disableOverRide")
+     451                      .dwattr $C$DW$38, DW_AT_external
+     452                      .dwattr $C$DW$38, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     453                      .dwattr $C$DW$38, DW_AT_TI_begin_line(0x70)
+     454                      .dwattr $C$DW$38, DW_AT_TI_begin_column(0x06)
+     455                      .dwattr $C$DW$38, DW_AT_TI_max_frame_size(-2)
+     456                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     457              
+     458                      .dwfde $C$DW$CIE, _WDOG_disableOverRide
+     459              $C$DW$39        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     460                      .dwattr $C$DW$39, DW_AT_TI_symbol_name("_wdogHandle")
+     461                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$26)
+     462                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg12]
+     463              
+     464              ;***************************************************************
+     465              ;* FNAME: _WDOG_disableOverRide         FR SIZE:   0           *
+     466              ;*                                                             *
+     467              ;* FUNCTION ENVIRONMENT                                        *
+     468              ;*                                                             *
+     469              ;* FUNCTION PROPERTIES                                         *
+     470              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     471              ;***************************************************************
+     472              
+     473              _WDOG_disableOverRide:
+     474              ;* AR4   assigned to _wdogHandle
+     475              $C$DW$40        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     476                      .dwattr $C$DW$40, DW_AT_TI_symbol_name("_wdogHandle")
+     477                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$33)
+     478                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg12]
+     479                      .dwcfi  cfa_offset, -2
+     480                      .dwcfi  save_reg_to_mem, 26, 0
+     481                      .dwcfi  save_reg_to_reg, 78, 26
+     482 0000002a 7622   EALLOW
+     483                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     484 0000002b 18C4          AND       *+XAR4[0],#0xfffe     ; [CPU_] |120| 
+         0000002c FFFE 
+     485 0000002d 761A   EDIS
+     486 0000002e FF69          SPM       #0                    ; [CPU_] 
+     487              $C$DW$41        .dwtag  DW_TAG_TI_branch
+     488                      .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     489                      .dwattr $C$DW$41, DW_AT_TI_return
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   10
+
+     490 0000002f 0006          LRETR     ; [CPU_] 
+     491                      ; return occurs ; [] 
+     492                      .dwattr $C$DW$38, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     493                      .dwattr $C$DW$38, DW_AT_TI_end_line(0x7d)
+     494                      .dwattr $C$DW$38, DW_AT_TI_end_column(0x01)
+     495                      .dwendentry
+     496                      .dwendtag $C$DW$38
+     497              
+     498 00000030               .sect   ".text"
+     499                      .global _WDOG_disableInt
+     500              
+     501              $C$DW$42        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_disableInt")
+     502                      .dwattr $C$DW$42, DW_AT_low_pc(_WDOG_disableInt)
+     503                      .dwattr $C$DW$42, DW_AT_high_pc(0x00)
+     504                      .dwattr $C$DW$42, DW_AT_TI_symbol_name("_WDOG_disableInt")
+     505                      .dwattr $C$DW$42, DW_AT_external
+     506                      .dwattr $C$DW$42, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     507                      .dwattr $C$DW$42, DW_AT_TI_begin_line(0x60)
+     508                      .dwattr $C$DW$42, DW_AT_TI_begin_column(0x06)
+     509                      .dwattr $C$DW$42, DW_AT_TI_max_frame_size(-2)
+     510                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     511              
+     512                      .dwfde $C$DW$CIE, _WDOG_disableInt
+     513              $C$DW$43        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     514                      .dwattr $C$DW$43, DW_AT_TI_symbol_name("_wdogHandle")
+     515                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$26)
+     516                      .dwattr $C$DW$43, DW_AT_location[DW_OP_reg12]
+     517              
+     518              ;***************************************************************
+     519              ;* FNAME: _WDOG_disableInt              FR SIZE:   0           *
+     520              ;*                                                             *
+     521              ;* FUNCTION ENVIRONMENT                                        *
+     522              ;*                                                             *
+     523              ;* FUNCTION PROPERTIES                                         *
+     524              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     525              ;***************************************************************
+     526              
+     527              _WDOG_disableInt:
+     528              ;* AR4   assigned to _wdogHandle
+     529              $C$DW$44        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     530                      .dwattr $C$DW$44, DW_AT_TI_symbol_name("_wdogHandle")
+     531                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$33)
+     532                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg12]
+     533                      .dwcfi  cfa_offset, -2
+     534                      .dwcfi  save_reg_to_mem, 26, 0
+     535                      .dwcfi  save_reg_to_reg, 78, 26
+     536 00000030 7622   EALLOW
+     537                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     538 00000031 18C4          AND       *+XAR4[0],#0xfffd     ; [CPU_] |104| 
+         00000032 FFFD 
+     539 00000033 761A   EDIS
+     540 00000034 FF69          SPM       #0                    ; [CPU_] 
+     541              $C$DW$45        .dwtag  DW_TAG_TI_branch
+     542                      .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+     543                      .dwattr $C$DW$45, DW_AT_TI_return
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   11
+
+     544 00000035 0006          LRETR     ; [CPU_] 
+     545                      ; return occurs ; [] 
+     546                      .dwattr $C$DW$42, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     547                      .dwattr $C$DW$42, DW_AT_TI_end_line(0x6d)
+     548                      .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
+     549                      .dwendentry
+     550                      .dwendtag $C$DW$42
+     551              
+     552 00000036               .sect   ".text"
+     553                      .global _WDOG_disable
+     554              
+     555              $C$DW$46        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_disable")
+     556                      .dwattr $C$DW$46, DW_AT_low_pc(_WDOG_disable)
+     557                      .dwattr $C$DW$46, DW_AT_high_pc(0x00)
+     558                      .dwattr $C$DW$46, DW_AT_TI_symbol_name("_WDOG_disable")
+     559                      .dwattr $C$DW$46, DW_AT_external
+     560                      .dwattr $C$DW$46, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     561                      .dwattr $C$DW$46, DW_AT_TI_begin_line(0x4c)
+     562                      .dwattr $C$DW$46, DW_AT_TI_begin_column(0x06)
+     563                      .dwattr $C$DW$46, DW_AT_TI_max_frame_size(-2)
+     564                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     565              
+     566                      .dwfde $C$DW$CIE, _WDOG_disable
+     567              $C$DW$47        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     568                      .dwattr $C$DW$47, DW_AT_TI_symbol_name("_wdogHandle")
+     569                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$26)
+     570                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg12]
+     571              
+     572              ;***************************************************************
+     573              ;* FNAME: _WDOG_disable                 FR SIZE:   0           *
+     574              ;*                                                             *
+     575              ;* FUNCTION ENVIRONMENT                                        *
+     576              ;*                                                             *
+     577              ;* FUNCTION PROPERTIES                                         *
+     578              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     579              ;***************************************************************
+     580              
+     581              _WDOG_disable:
+     582              ;* AR4   assigned to _wdogHandle
+     583              $C$DW$48        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     584                      .dwattr $C$DW$48, DW_AT_TI_symbol_name("_wdogHandle")
+     585                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$33)
+     586                      .dwattr $C$DW$48, DW_AT_location[DW_OP_reg12]
+     587              ;* AL    assigned to _regValue
+     588              $C$DW$49        .dwtag  DW_TAG_variable, DW_AT_name("regValue")
+     589                      .dwattr $C$DW$49, DW_AT_TI_symbol_name("_regValue")
+     590                      .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$19)
+     591                      .dwattr $C$DW$49, DW_AT_location[DW_OP_reg0]
+     592                      .dwcfi  cfa_offset, -2
+     593                      .dwcfi  save_reg_to_mem, 26, 0
+     594                      .dwcfi  save_reg_to_reg, 78, 26
+     595                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     596 00000036 92FC          MOV       AL,*+XAR4[7]          ; [CPU_] |79| 
+     597 00000037 7622   EALLOW
+     598                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   12
+
+     599 00000038 5040          ORB       AL,#0x40              ; [CPU_] |88| 
+     600 00000039 5028          ORB       AL,#0x28              ; [CPU_] |88| 
+     601 0000003a 96FC          MOV       *+XAR4[7],AL          ; [CPU_] |88| 
+     602 0000003b 761A   EDIS
+     603 0000003c FF69          SPM       #0                    ; [CPU_] 
+     604              $C$DW$50        .dwtag  DW_TAG_TI_branch
+     605                      .dwattr $C$DW$50, DW_AT_low_pc(0x00)
+     606                      .dwattr $C$DW$50, DW_AT_TI_return
+     607 0000003d 0006          LRETR     ; [CPU_] 
+     608                      ; return occurs ; [] 
+     609                      .dwattr $C$DW$46, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     610                      .dwattr $C$DW$46, DW_AT_TI_end_line(0x5d)
+     611                      .dwattr $C$DW$46, DW_AT_TI_end_column(0x01)
+     612                      .dwendentry
+     613                      .dwendtag $C$DW$46
+     614              
+     615 0000003e               .sect   ".text"
+     616                      .global _WDOG_clearCounter
+     617              
+     618              $C$DW$51        .dwtag  DW_TAG_subprogram, DW_AT_name("WDOG_clearCounter")
+     619                      .dwattr $C$DW$51, DW_AT_low_pc(_WDOG_clearCounter)
+     620                      .dwattr $C$DW$51, DW_AT_high_pc(0x00)
+     621                      .dwattr $C$DW$51, DW_AT_TI_symbol_name("_WDOG_clearCounter")
+     622                      .dwattr $C$DW$51, DW_AT_external
+     623                      .dwattr $C$DW$51, DW_AT_TI_begin_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/s
+     624                      .dwattr $C$DW$51, DW_AT_TI_begin_line(0x39)
+     625                      .dwattr $C$DW$51, DW_AT_TI_begin_column(0x06)
+     626                      .dwattr $C$DW$51, DW_AT_TI_max_frame_size(-2)
+     627                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     628              
+     629                      .dwfde $C$DW$CIE, _WDOG_clearCounter
+     630              $C$DW$52        .dwtag  DW_TAG_formal_parameter, DW_AT_name("wdogHandle")
+     631                      .dwattr $C$DW$52, DW_AT_TI_symbol_name("_wdogHandle")
+     632                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$26)
+     633                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg12]
+     634              
+     635              ;***************************************************************
+     636              ;* FNAME: _WDOG_clearCounter            FR SIZE:   0           *
+     637              ;*                                                             *
+     638              ;* FUNCTION ENVIRONMENT                                        *
+     639              ;*                                                             *
+     640              ;* FUNCTION PROPERTIES                                         *
+     641              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     642              ;***************************************************************
+     643              
+     644              _WDOG_clearCounter:
+     645              ;* AR4   assigned to _wdogHandle
+     646              $C$DW$53        .dwtag  DW_TAG_variable, DW_AT_name("wdogHandle")
+     647                      .dwattr $C$DW$53, DW_AT_TI_symbol_name("_wdogHandle")
+     648                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$33)
+     649                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg12]
+     650                      .dwcfi  cfa_offset, -2
+     651                      .dwcfi  save_reg_to_mem, 26, 0
+     652                      .dwcfi  save_reg_to_reg, 78, 26
+     653 0000003e 7622   EALLOW
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   13
+
+     654                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     655 0000003f 56BF          MOVB      *+XAR4[3],#85,UNC     ; [CPU_] |65| 
+         00000040 55DC 
+     656                      .dwpsn  file "D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src/32b/f28x/f2802x/wdog.c
+     657 00000041 56BF          MOVB      *+XAR4[3],#170,UNC    ; [CPU_] |68| 
+         00000042 AADC 
+     658 00000043 761A   EDIS
+     659 00000044 FF69          SPM       #0                    ; [CPU_] 
+     660              $C$DW$54        .dwtag  DW_TAG_TI_branch
+     661                      .dwattr $C$DW$54, DW_AT_low_pc(0x00)
+     662                      .dwattr $C$DW$54, DW_AT_TI_return
+     663 00000045 0006          LRETR     ; [CPU_] 
+     664                      ; return occurs ; [] 
+     665                      .dwattr $C$DW$51, DW_AT_TI_end_file("D:/victor TI/Customer issue/Zero/4inOne/Code/sw/drivers/wdog/src
+     666                      .dwattr $C$DW$51, DW_AT_TI_end_line(0x49)
+     667                      .dwattr $C$DW$51, DW_AT_TI_end_column(0x01)
+     668                      .dwendentry
+     669                      .dwendtag $C$DW$51
+     670              
+     671              
+     672              ;***************************************************************
+     673              ;* TYPE INFORMATION                                            *
+     674              ;***************************************************************
+     675              
+     676              $C$DW$T$23      .dwtag  DW_TAG_enumeration_type
+     677                      .dwattr $C$DW$T$23, DW_AT_byte_size(0x01)
+     678              $C$DW$55        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_IntStatus_Active"), DW_AT_const_value(0x00)
+     679              $C$DW$56        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_IntStatus_InActive"), DW_AT_const_value(0x04)
+     680                      .dwendtag $C$DW$T$23
+     681              
+     682              $C$DW$T$24      .dwtag  DW_TAG_typedef, DW_AT_name("WDOG_IntStatus_e")
+     683                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+     684                      .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+     685              
+     686              $C$DW$T$29      .dwtag  DW_TAG_enumeration_type
+     687                      .dwattr $C$DW$T$29, DW_AT_byte_size(0x01)
+     688              $C$DW$57        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_1"), DW_AT_const_value
+     689              $C$DW$58        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_2"), DW_AT_const_value
+     690              $C$DW$59        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_4"), DW_AT_const_value
+     691              $C$DW$60        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_8"), DW_AT_const_value
+     692              $C$DW$61        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_16"), DW_AT_const_valu
+     693              $C$DW$62        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_32"), DW_AT_const_valu
+     694              $C$DW$63        .dwtag  DW_TAG_enumerator, DW_AT_name("WDOG_PreScaler_OscClk_by_512_by_64"), DW_AT_const_valu
+     695                      .dwendtag $C$DW$T$29
+     696              
+     697              $C$DW$T$30      .dwtag  DW_TAG_typedef, DW_AT_name("WDOG_PreScaler_e")
+     698                      .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
+     699                      .dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+     700              $C$DW$64        .dwtag  DW_TAG_TI_far_type
+     701                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$30)
+     702              $C$DW$T$31      .dwtag  DW_TAG_const_type
+     703                      .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$64)
+     704              
+     705              $C$DW$T$22      .dwtag  DW_TAG_structure_type
+     706                      .dwattr $C$DW$T$22, DW_AT_name("_WDOG_Obj_")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   14
+
+     707                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x08)
+     708              $C$DW$65        .dwtag  DW_TAG_member
+     709                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$20)
+     710                      .dwattr $C$DW$65, DW_AT_name("SCSR")
+     711                      .dwattr $C$DW$65, DW_AT_TI_symbol_name("_SCSR")
+     712                      .dwattr $C$DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     713                      .dwattr $C$DW$65, DW_AT_accessibility(DW_ACCESS_public)
+     714              $C$DW$66        .dwtag  DW_TAG_member
+     715                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$20)
+     716                      .dwattr $C$DW$66, DW_AT_name("WDCNTR")
+     717                      .dwattr $C$DW$66, DW_AT_TI_symbol_name("_WDCNTR")
+     718                      .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     719                      .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+     720              $C$DW$67        .dwtag  DW_TAG_member
+     721                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$20)
+     722                      .dwattr $C$DW$67, DW_AT_name("rsvd_1")
+     723                      .dwattr $C$DW$67, DW_AT_TI_symbol_name("_rsvd_1")
+     724                      .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+     725                      .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+     726              $C$DW$68        .dwtag  DW_TAG_member
+     727                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$20)
+     728                      .dwattr $C$DW$68, DW_AT_name("WDKEY")
+     729                      .dwattr $C$DW$68, DW_AT_TI_symbol_name("_WDKEY")
+     730                      .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+     731                      .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+     732              $C$DW$69        .dwtag  DW_TAG_member
+     733                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$21)
+     734                      .dwattr $C$DW$69, DW_AT_name("rsvd_2")
+     735                      .dwattr $C$DW$69, DW_AT_TI_symbol_name("_rsvd_2")
+     736                      .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     737                      .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+     738              $C$DW$70        .dwtag  DW_TAG_member
+     739                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$20)
+     740                      .dwattr $C$DW$70, DW_AT_name("WDCR")
+     741                      .dwattr $C$DW$70, DW_AT_TI_symbol_name("_WDCR")
+     742                      .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
+     743                      .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+     744                      .dwendtag $C$DW$T$22
+     745              
+     746              $C$DW$T$32      .dwtag  DW_TAG_typedef, DW_AT_name("WDOG_Obj")
+     747                      .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$22)
+     748                      .dwattr $C$DW$T$32, DW_AT_language(DW_LANG_C)
+     749              $C$DW$T$25      .dwtag  DW_TAG_pointer_type
+     750                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$22)
+     751                      .dwattr $C$DW$T$25, DW_AT_address_class(0x16)
+     752              $C$DW$T$26      .dwtag  DW_TAG_typedef, DW_AT_name("WDOG_Handle")
+     753                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+     754                      .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+     755              $C$DW$71        .dwtag  DW_TAG_TI_far_type
+     756                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$26)
+     757              $C$DW$T$33      .dwtag  DW_TAG_const_type
+     758                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$71)
+     759              $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     760                      .dwattr $C$DW$T$3, DW_AT_address_class(0x16)
+     761              $C$DW$72        .dwtag  DW_TAG_TI_far_type
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   15
+
+     762                      .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$3)
+     763              $C$DW$T$39      .dwtag  DW_TAG_const_type
+     764                      .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$72)
+     765              $C$DW$T$4       .dwtag  DW_TAG_base_type
+     766                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     767                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+     768                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     769              $C$DW$T$5       .dwtag  DW_TAG_base_type
+     770                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     771                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     772                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     773              $C$DW$T$6       .dwtag  DW_TAG_base_type
+     774                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     775                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     776                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     777              $C$DW$T$7       .dwtag  DW_TAG_base_type
+     778                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     779                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     780                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+     781              $C$DW$T$8       .dwtag  DW_TAG_base_type
+     782                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     783                      .dwattr $C$DW$T$8, DW_AT_name("short")
+     784                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+     785              $C$DW$T$9       .dwtag  DW_TAG_base_type
+     786                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     787                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     788                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+     789              $C$DW$T$19      .dwtag  DW_TAG_typedef, DW_AT_name("uint16_t")
+     790                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$9)
+     791                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     792              $C$DW$73        .dwtag  DW_TAG_TI_far_type
+     793                      .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$19)
+     794              $C$DW$T$20      .dwtag  DW_TAG_volatile_type
+     795                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$73)
+     796              
+     797              $C$DW$T$21      .dwtag  DW_TAG_array_type
+     798                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+     799                      .dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
+     800                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x03)
+     801              $C$DW$74        .dwtag  DW_TAG_subrange_type
+     802                      .dwattr $C$DW$74, DW_AT_upper_bound(0x02)
+     803                      .dwendtag $C$DW$T$21
+     804              
+     805              $C$DW$T$41      .dwtag  DW_TAG_typedef, DW_AT_name("uint_least8_t")
+     806                      .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$19)
+     807                      .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+     808              $C$DW$75        .dwtag  DW_TAG_TI_far_type
+     809                      .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$41)
+     810              $C$DW$T$42      .dwtag  DW_TAG_const_type
+     811                      .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$75)
+     812              $C$DW$T$10      .dwtag  DW_TAG_base_type
+     813                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     814                      .dwattr $C$DW$T$10, DW_AT_name("int")
+     815                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+     816              $C$DW$T$11      .dwtag  DW_TAG_base_type
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   16
+
+     817                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     818                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     819                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+     820              $C$DW$T$12      .dwtag  DW_TAG_base_type
+     821                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     822                      .dwattr $C$DW$T$12, DW_AT_name("long")
+     823                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+     824              $C$DW$T$13      .dwtag  DW_TAG_base_type
+     825                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     826                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     827                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+     828              $C$DW$T$34      .dwtag  DW_TAG_typedef, DW_AT_name("size_t")
+     829                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$13)
+     830                      .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+     831              $C$DW$76        .dwtag  DW_TAG_TI_far_type
+     832                      .dwattr $C$DW$76, DW_AT_type(*$C$DW$T$34)
+     833              $C$DW$T$35      .dwtag  DW_TAG_const_type
+     834                      .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$76)
+     835              $C$DW$T$14      .dwtag  DW_TAG_base_type
+     836                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     837                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+     838                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+     839              $C$DW$T$15      .dwtag  DW_TAG_base_type
+     840                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     841                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     842                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+     843              $C$DW$T$16      .dwtag  DW_TAG_base_type
+     844                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     845                      .dwattr $C$DW$T$16, DW_AT_name("float")
+     846                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+     847              $C$DW$T$17      .dwtag  DW_TAG_base_type
+     848                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     849                      .dwattr $C$DW$T$17, DW_AT_name("double")
+     850                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+     851              $C$DW$T$18      .dwtag  DW_TAG_base_type
+     852                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     853                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+     854                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+     855                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     856              
+     857              ;***************************************************************
+     858              ;* DWARF CIE ENTRIES                                           *
+     859              ;***************************************************************
+     860              
+     861              $C$DW$CIE       .dwcie 78
+     862                      .dwcfi  cfa_register, 20
+     863                      .dwcfi  cfa_offset, 0
+     864                      .dwcfi  undefined, 0
+     865                      .dwcfi  undefined, 1
+     866                      .dwcfi  undefined, 2
+     867                      .dwcfi  undefined, 3
+     868                      .dwcfi  undefined, 20
+     869                      .dwcfi  undefined, 21
+     870                      .dwcfi  undefined, 22
+     871                      .dwcfi  undefined, 23
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   17
+
+     872                      .dwcfi  undefined, 24
+     873                      .dwcfi  undefined, 25
+     874                      .dwcfi  undefined, 26
+     875                      .dwcfi  same_value, 28
+     876                      .dwcfi  undefined, 29
+     877                      .dwcfi  undefined, 30
+     878                      .dwcfi  undefined, 31
+     879                      .dwcfi  undefined, 32
+     880                      .dwcfi  undefined, 33
+     881                      .dwcfi  undefined, 34
+     882                      .dwcfi  undefined, 35
+     883                      .dwcfi  undefined, 36
+     884                      .dwcfi  undefined, 37
+     885                      .dwcfi  undefined, 38
+     886                      .dwcfi  undefined, 75
+     887                      .dwcfi  undefined, 76
+     888                      .dwcfi  undefined, 77
+     889                      .dwcfi  undefined, 4
+     890                      .dwcfi  same_value, 6
+     891                      .dwcfi  same_value, 8
+     892                      .dwcfi  same_value, 10
+     893                      .dwcfi  undefined, 12
+     894                      .dwcfi  undefined, 14
+     895                      .dwcfi  undefined, 16
+     896                      .dwcfi  undefined, 17
+     897                      .dwcfi  undefined, 18
+     898                      .dwcfi  undefined, 19
+     899                      .dwcfi  undefined, 5
+     900                      .dwcfi  same_value, 7
+     901                      .dwcfi  same_value, 9
+     902                      .dwcfi  same_value, 11
+     903                      .dwcfi  undefined, 13
+     904                      .dwcfi  undefined, 15
+     905                      .dwcfi  undefined, 78
+     906                      .dwendentry
+     907              
+     908              ;***************************************************************
+     909              ;* DWARF REGISTER MAP                                          *
+     910              ;***************************************************************
+     911              
+     912              $C$DW$77        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AL")
+     913                      .dwattr $C$DW$77, DW_AT_location[DW_OP_reg0]
+     914              $C$DW$78        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AH")
+     915                      .dwattr $C$DW$78, DW_AT_location[DW_OP_reg1]
+     916              $C$DW$79        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PL")
+     917                      .dwattr $C$DW$79, DW_AT_location[DW_OP_reg2]
+     918              $C$DW$80        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PH")
+     919                      .dwattr $C$DW$80, DW_AT_location[DW_OP_reg3]
+     920              $C$DW$81        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SP")
+     921                      .dwattr $C$DW$81, DW_AT_location[DW_OP_reg20]
+     922              $C$DW$82        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XT")
+     923                      .dwattr $C$DW$82, DW_AT_location[DW_OP_reg21]
+     924              $C$DW$83        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("T")
+     925                      .dwattr $C$DW$83, DW_AT_location[DW_OP_reg22]
+     926              $C$DW$84        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("ST0")
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   18
+
+     927                      .dwattr $C$DW$84, DW_AT_location[DW_OP_reg23]
+     928              $C$DW$85        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("ST1")
+     929                      .dwattr $C$DW$85, DW_AT_location[DW_OP_reg24]
+     930              $C$DW$86        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PC")
+     931                      .dwattr $C$DW$86, DW_AT_location[DW_OP_reg25]
+     932              $C$DW$87        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("RPC")
+     933                      .dwattr $C$DW$87, DW_AT_location[DW_OP_reg26]
+     934              $C$DW$88        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("FP")
+     935                      .dwattr $C$DW$88, DW_AT_location[DW_OP_reg28]
+     936              $C$DW$89        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("DP")
+     937                      .dwattr $C$DW$89, DW_AT_location[DW_OP_reg29]
+     938              $C$DW$90        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SXM")
+     939                      .dwattr $C$DW$90, DW_AT_location[DW_OP_reg30]
+     940              $C$DW$91        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PM")
+     941                      .dwattr $C$DW$91, DW_AT_location[DW_OP_reg31]
+     942              $C$DW$92        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("OVM")
+     943                      .dwattr $C$DW$92, DW_AT_location[DW_OP_regx 0x20]
+     944              $C$DW$93        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PAGE0")
+     945                      .dwattr $C$DW$93, DW_AT_location[DW_OP_regx 0x21]
+     946              $C$DW$94        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AMODE")
+     947                      .dwattr $C$DW$94, DW_AT_location[DW_OP_regx 0x22]
+     948              $C$DW$95        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("INTM")
+     949                      .dwattr $C$DW$95, DW_AT_location[DW_OP_regx 0x23]
+     950              $C$DW$96        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("IFR")
+     951                      .dwattr $C$DW$96, DW_AT_location[DW_OP_regx 0x24]
+     952              $C$DW$97        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("IER")
+     953                      .dwattr $C$DW$97, DW_AT_location[DW_OP_regx 0x25]
+     954              $C$DW$98        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("V")
+     955                      .dwattr $C$DW$98, DW_AT_location[DW_OP_regx 0x26]
+     956              $C$DW$99        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PSEUDOH")
+     957                      .dwattr $C$DW$99, DW_AT_location[DW_OP_regx 0x4c]
+     958              $C$DW$100       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("VOL")
+     959                      .dwattr $C$DW$100, DW_AT_location[DW_OP_regx 0x4d]
+     960              $C$DW$101       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR0")
+     961                      .dwattr $C$DW$101, DW_AT_location[DW_OP_reg4]
+     962              $C$DW$102       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR1")
+     963                      .dwattr $C$DW$102, DW_AT_location[DW_OP_reg6]
+     964              $C$DW$103       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR2")
+     965                      .dwattr $C$DW$103, DW_AT_location[DW_OP_reg8]
+     966              $C$DW$104       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR3")
+     967                      .dwattr $C$DW$104, DW_AT_location[DW_OP_reg10]
+     968              $C$DW$105       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR4")
+     969                      .dwattr $C$DW$105, DW_AT_location[DW_OP_reg12]
+     970              $C$DW$106       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR5")
+     971                      .dwattr $C$DW$106, DW_AT_location[DW_OP_reg14]
+     972              $C$DW$107       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR6")
+     973                      .dwattr $C$DW$107, DW_AT_location[DW_OP_reg16]
+     974              $C$DW$108       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR6")
+     975                      .dwattr $C$DW$108, DW_AT_location[DW_OP_reg17]
+     976              $C$DW$109       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("AR7")
+     977                      .dwattr $C$DW$109, DW_AT_location[DW_OP_reg18]
+     978              $C$DW$110       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR7")
+     979                      .dwattr $C$DW$110, DW_AT_location[DW_OP_reg19]
+     980              $C$DW$111       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR0")
+     981                      .dwattr $C$DW$111, DW_AT_location[DW_OP_reg5]
+TMS320C2000 Assembler PC v6.2.3 Thu Jun 25 17:41:57 2015
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+C:\Users\a0220341\AppData\Local\Temp\0954410                         PAGE   19
+
+     982              $C$DW$112       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR1")
+     983                      .dwattr $C$DW$112, DW_AT_location[DW_OP_reg7]
+     984              $C$DW$113       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR2")
+     985                      .dwattr $C$DW$113, DW_AT_location[DW_OP_reg9]
+     986              $C$DW$114       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR3")
+     987                      .dwattr $C$DW$114, DW_AT_location[DW_OP_reg11]
+     988              $C$DW$115       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR4")
+     989                      .dwattr $C$DW$115, DW_AT_location[DW_OP_reg13]
+     990              $C$DW$116       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("XAR5")
+     991                      .dwattr $C$DW$116, DW_AT_location[DW_OP_reg15]
+     992              $C$DW$117       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CIE_RETA")
+     993                      .dwattr $C$DW$117, DW_AT_location[DW_OP_regx 0x4e]
+     994                      .dwendtag $C$DW$CU
+     995              
+
+No Assembly Errors, No Assembly Warnings
